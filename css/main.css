@@ -302,3 +302,9 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+html, body
+{
+    height: 100%;
+    margin:0;
+}
