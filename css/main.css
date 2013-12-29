@@ -307,4 +307,14 @@ html, body
 {
     height: 100%;
     margin:0;
+    font: normal 14px/1.5 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+article {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);/* RGBa with 0.6 opacity */
+
+    max-width: 800px;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 20px
 }
