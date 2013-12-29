@@ -308,6 +308,8 @@ html, body
     height: 100%;
     margin:0;
     font: normal 14px/1.5 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+    position: fixed;
 }
 article {
     background-color: rgb(255, 255, 255);
