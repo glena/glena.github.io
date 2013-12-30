@@ -65,15 +65,11 @@ body{
     background-size: auto 100%;
 }
 
-article {
-    /*background-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.5);*/
+article.main {
     max-width: 500px;
-    /*border-radius: 5px;*/
     font-size: 16px;
     color:#FFFFFF;
-    margin: 10% 100px 0;
-    padding: 20px;
+    padding: 10% 10% 0;
 	text-shadow: 3px 3px 15px #000000;
 }
 article header {
@@ -107,31 +103,15 @@ a img {
     border:none;
 }
 
-@media all and (max-width: 600px) {
-    article {
-       margin: 0 10%;
-    }
-}
-
-@media all and (max-width: 450px) {
-    article {
-       margin: 0;
-       border-radius: 0;
-    }
-    body {
-        overflow: auto;
-    }
-}
-
-@media all and (max-width: 375px) {
+@media all and (max-width: 410px) {
     article footer .about-text {
         display: block;
     }
-    article footer a {
-        margin-left: 9%;
+    article footer .about-icons {
+        text-align: center;
+        display: block;
     }
-    article footer a img{
-        width: 13%;
-        height: auto;
+    article footer a {
+        margin: auto;
     }
 }
