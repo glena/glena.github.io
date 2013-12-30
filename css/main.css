@@ -82,10 +82,10 @@ body{
     margin: 0;
 }
 article {
-    background-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.5);
+    /*background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);*/
     max-width: 500px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     margin: 0 100px;
     padding: 20px
 }
@@ -108,8 +108,9 @@ article footer a{
     margin-left: 10px;
 }
 a, a:visited{
-    color:#FF4242;
-    text-decoration: none;
+    color: #FF0085;
+	text-decoration: none;
+	font-weight: bold;
 }
 a:hover{
     text-decoration: underline;
