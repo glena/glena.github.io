@@ -65,12 +65,28 @@ body{
     background: transparent url('../img/backgrounds/image015.jpg') no-repeat center center;
     background-size: auto 100%;
 }
+.wrapper{
+    width: 100%;
+    padding: 0;
+    display: table;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+.wrapper .inner{
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0;
+}
 article {
     background-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.5);/* RGBa with 0.6 opacity */
-    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 500px;
     border-radius: 5px;
-    margin: 20px auto;
+    margin: 0 0 0 100px;
     padding: 20px
 }
 article header {
