@@ -59,11 +59,11 @@ html, body
     height: 100%;
     margin:0;
     font: normal 14px/1.5  'Roboto Condensed', sans-serif;
-    overflow: hidden;
 }
 body{
     background: transparent url('../img/backgrounds/image015.jpg') no-repeat center center;
     background-size: auto 100%;
+    overflow: hidden;
 }
 .wrapper{
     width: 100%;
@@ -86,7 +86,7 @@ article {
     background-color: rgba(255, 255, 255, 0.5);
     max-width: 500px;
     border-radius: 5px;
-    margin: 0 0 0 100px;
+    margin: 0 100px;
     padding: 20px
 }
 article header {
@@ -101,6 +101,9 @@ article footer {
     line-height: 40px;
     padding: 5px 0 0;
 }
+article footer .about-text{
+    font-weight: bold;
+}
 article footer a{
     margin-left: 10px;
 }
@@ -113,4 +116,33 @@ a:hover{
 }
 a img {
     border:none;
+}
+
+@media all and (max-width: 600px) {
+    article {
+       margin: 0 10%;
+    }
+}
+
+@media all and (max-width: 450px) {
+    article {
+       margin: 0;
+       border-radius: 0;
+    }
+    body {
+        overflow: auto;
+    }
+}
+
+@media all and (max-width: 350px) {
+    article footer .about-text {
+        display: block;
+    }
+    article footer a {
+        margin-left: 9%;
+    }
+    article footer a img{
+        width: 13%;
+        height: auto;
+    }
 }
