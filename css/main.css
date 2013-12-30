@@ -88,7 +88,8 @@ article {
     font-size: 16px;
     color:#FFFFFF;
     margin: 0 100px;
-    padding: 20px
+    padding: 20px;
+	text-shadow: 3px 3px 15px #000000;
 }
 article header {
     border-bottom: 1px solid #BBB;
@@ -112,6 +113,7 @@ a, a:visited{
     color: #FF0085;
 	text-decoration: none;
 	font-weight: bold;
+	text-shadow: 0px 3px 15px #FFFFFF;
 }
 a:hover{
     text-decoration: underline;
