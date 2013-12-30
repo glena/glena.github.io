@@ -136,7 +136,7 @@ a img {
     }
 }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 375px) {
     article footer .about-text {
         display: block;
     }
