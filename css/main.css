@@ -64,22 +64,7 @@ body{
     background: transparent url('../img/backgrounds/image015.jpg') no-repeat center center;
     background-size: auto 100%;
 }
-.wrapper{
-    width: 100%;
-    padding: 0;
-    display: table;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-}
-.wrapper .inner{
-    padding: 0;
-    vertical-align: middle;
-    display: table-cell;
-    margin: 0;
-}
+
 article {
     /*background-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.5);*/
@@ -87,7 +72,7 @@ article {
     /*border-radius: 5px;*/
     font-size: 16px;
     color:#FFFFFF;
-    margin: 0 100px;
+    margin: 10% 100px 0;
     padding: 20px;
 	text-shadow: 3px 3px 15px #000000;
 }
