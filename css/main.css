@@ -63,7 +63,6 @@ html, body
 body{
     background: transparent url('../img/backgrounds/image015.jpg') no-repeat center center;
     background-size: auto 100%;
-    overflow: hidden;
 }
 .wrapper{
     width: 100%;
