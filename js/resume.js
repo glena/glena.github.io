@@ -23,7 +23,19 @@ var lastFill = null;
 function getFill() {
 	var fill;
 	do{
-		var colors = ['red','blue','orange','yellow','green'];
+		var colors = [
+			'#ff0000',
+			'#3577c4',
+			'#ffaa00',
+			'#ffff00',
+			'#74c425', 
+			'#940bdd', 
+			'#00f6ff', 
+			'#ff00c3', 
+			'#8e6d2c', 
+			'#ffffff', 
+			'#b2ff00'
+		];
 		var index = Math.floor((Math.random()*(colors.length-1))+1);
 		fill = colors[index];
 	} while (fill == lastFill);
@@ -228,9 +240,11 @@ var formatToShow = d3.time.format("%m/%d/%Y");
 var format = d3.time.format("%Y-%m-%d");
 var parseDate = format.parse;
 
-var svg = d3.select("svg")
-      .attr("width", size.width)
-      .attr("height", size.height);
+var svg = d3
+		.select("article.resume")
+		.append('svg')
+      		.attr("width", size.width)
+      		.attr("height", size.height);
 
 var topSemicircle = d3.select("#top");
 

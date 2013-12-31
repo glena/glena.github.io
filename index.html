@@ -20,40 +20,50 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <nav>
+            <ul>
+                <li><a href="#about-me" onclick="showArticle(this.href)">About Me</a></li>
+                <li><a href="#experience" onclick="showArticle(this.href)">Experience &amp; Studies</a></li>
+            </ul>
+        </nav>
 
+        <article class="main">
+            <header>
+                <h1>Germán Lena</h1>
+            </header>
 
-                <article class="main">
-                    <header>
-                        <h1>Germán Lena</h1>
-                    </header>
+            <p>
+                I love music and sports (I usually go out running, rollerblading or swimming) but my real hobby is to program and learn new technologies.
+            </p>
 
-                    <p>
-                        I love music and sports (I usually go out running, rollerblading or swimming) but my real hobby is to program and learn new technologies.
-                    </p>
+            <p>
+                Now, working on my own project about open data and data visualization (you can check it on <a href="http://datosdemocraticos.com.ar">Datos Democraticos</a> and <a href="http://reservashoy.com.ar">Reservas Hoy</a>).
+            </p>
 
-                    <p>
-                        Now, working on my own project about open data and data visualization (you can check it on <a href="http://datosdemocraticos.com.ar">Datos Democraticos</a> and <a href="http://reservashoy.com.ar">Reservas Hoy</a>).
-                    </p>
+            <p>
+                I also love travelling and I have another project (<a href="http://saisiner.com">Saisiner</a>). It started with the excuse of track my own trip around Europe and now I am working to improve it and bring useful tools to sightseeing (from this word the name). I hope to finish the V2 soon.
+            </p>
 
-                    <p>
-                        I also love travelling and I have another project (<a href="http://saisiner.com">Saisiner</a>). It started with the excuse of track my own trip around Europe and now I am working to improve it and bring useful tools to sightseeing (from this word the name). I hope to finish the V2 soon.
-                    </p>
-
-                    <footer>
-                    <span class="about-text">Follow me on:</span>
-					<span class="about-icons">
-	                    <a href="https://github.com/glena"><img width="40" height="40" src="/img/icons/github.png" alt="Github" title="My Github Profile" /></a>
-	                    <a href="http://ar.linkedin.com/in/germanlena/"><img width="40" height="40" src="/img/icons/linkedin.png" alt="LinkedIn" title="My LinkedIn Profile" /></a>
-	                    <a href="https://twitter.com/german_lena"><img width="40" height="40" src="/img/icons/twitter.png" alt="Twitter" title="My Twitter Timeline" /></a>
-	                    <a href="http://www.flickr.com/photos/german_lena/"><img width="40" height="40" src="/img/icons/flickr.png" alt="Flickr" title="My Flickr Gallery" /></a>
-					</span>
-                    </footer>
-                </article>
+            <footer>
+            <span class="about-text">Follow me on:</span>
+			<span class="about-icons">
+                <a href="https://github.com/glena"><img width="40" height="40" src="/img/icons/github.png" alt="Github" title="My Github Profile" /></a>
+                <a href="http://ar.linkedin.com/in/germanlena/"><img width="40" height="40" src="/img/icons/linkedin.png" alt="LinkedIn" title="My LinkedIn Profile" /></a>
+                <a href="https://twitter.com/german_lena"><img width="40" height="40" src="/img/icons/twitter.png" alt="Twitter" title="My Twitter Timeline" /></a>
+                <a href="http://www.flickr.com/photos/german_lena/"><img width="40" height="40" src="/img/icons/flickr.png" alt="Flickr" title="My Flickr Gallery" /></a>
+			</span>
+            </footer>
+        </article>
+        <article class="resume">
+        </article>
             
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="/js/vendor/jquery.backstretch.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="/js/resume.js"></script>
+        <script src="/js/main.js"></script>
         <script>
             $('a').click(function(){
                 //ga('send', 'event', 'link', 'click', this.href);
@@ -67,6 +77,23 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
+            $(document).ready(checkHash);
+            function checkHash()
+            {
+                showArticle(window.location.hash);
+            }
+            function showArticle(hash)
+            {
+                var pages = {
+                    '#about-me':'.main',
+                    '#experience':'.resume',
+                };
+                var selector = pages[hash];
+                if (selector != undefined)
+                {
+                    showArticle(selector);
+                }
+            }
     </script>
     </body>
 </html>
