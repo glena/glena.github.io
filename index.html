@@ -56,6 +56,7 @@
         <script src="js/vendor/jquery.backstretch.min.js"></script>
         <script>
             $('a').click(function(){
+				_gaq.push(['_trackEvent', 'link', 'click', this.href]);
                 //ga('send', 'event', 'link', 'click', this.href);
             });
             $.backstretch("../img/backgrounds/image015.jpg");
