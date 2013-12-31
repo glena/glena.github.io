@@ -119,6 +119,11 @@ article.resume {
     margin:auto;
     display:none;
 }
+nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 nav ul li {
     float:left;
     padding: 10px;
