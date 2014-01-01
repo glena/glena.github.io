@@ -72,22 +72,22 @@ article.main {
     padding: 10% 10% 0;
 	text-shadow: 3px 3px 15px #000000;
 }
-article header {
+article.main header {
     border-bottom: 1px solid #BBB;
 }
-article header h1{
+article.main header h1{
     margin:0;
     font-weight: normal;
 }
-article footer {
+article.main footer {
     border-top: 1px solid #BBB;
     line-height: 40px;
     padding: 5px 0 0;
 }
-article footer .about-text{
+article.main footer .about-text{
     font-weight: bold;
 }
-article footer a{
+article.main footer a{
     margin-left: 10px;
 }
 a, a:visited{
@@ -102,8 +102,33 @@ a:hover{
 a img {
     border:none;
 }
-
+article.resume {
+    margin:auto;
+    display:none;
+}
+nav {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    float:left;
+    padding: 10px;
+    line-height: 15px;
+    background: rgba(255,255,255,0.5);
+    margin-right: 1px;
+}
+nav ul li a {
+    text-shadow:none;
+}
 @media all and (max-width: 410px) {
+    nav {
+        position: static;
+    }
     article footer .about-text {
         display: block;
     }
@@ -115,22 +140,8 @@ a img {
         margin: auto;
     }
 }
-article.resume {
-    margin:auto;
-    display:none;
-}
-nav {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-nav ul li {
-    float:left;
-    padding: 10px;
-    line-height: 15px;
-    background: rgba(255,255,255,0.5);
-    margin-right: 1px;
-}
-nav ul li a {
-    text-shadow:none;
+@media all and (max-width: 280px) {
+    nav ul li {
+        padding:7px;
+    }
 }

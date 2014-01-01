@@ -69,24 +69,8 @@ function calculateDiameter(data)
 	});
 }
 
-function loadItems(svg, data, className, position, infoTopPosition)
+function loadItems(svg, graphContainer, data, className, position, infoTopPosition)
 {
-
-	svg.append('text')
-			.style("fill", "white")
-			.classed('label',true)
-			.attr("font-size","18px")
-			.text('WORKS')
-			.style("text-anchor", "center")
-			.attr("transform", "translate("+[15,(size.height/2) - 25]+") rotate(-90)");
-
-	svg.append('text')
-			.style("fill", "white")
-			.classed('label',true)
-			.attr("font-size","18px")
-			.text('STUDIES')
-			.style("text-anchor", "center")
-			.attr("transform", "translate("+[15,(size.height/2) + 100]+") rotate(-90)");
 
 	var gInfo = svg
 		.selectAll("g.info."+className)
@@ -160,7 +144,7 @@ function loadItems(svg, data, className, position, infoTopPosition)
 				});
 
 
-	svg
+	graphContainer
 		.selectAll("path."+className)
 		.data(data)
 		.enter()
@@ -173,10 +157,10 @@ function loadItems(svg, data, className, position, infoTopPosition)
 	        .attr("stroke-width", "2")	
 	        .attr("d",function(d){ return getPathCommandsQuadratic(d.diameter, position); })
 	        .attr("transform", function(d) {
-				return "translate(" + [x(d.from),  Math.floor(size.height/2)] + ")";
+				return "translate(" + [x(d.from),  0] + ")";
 			})
 			.on('mouseover', function(d){
-				svg
+				graphContainer
 					.selectAll("path.item")
 					.transition()
 						.attr("stroke-width", "1")	
@@ -190,7 +174,7 @@ function loadItems(svg, data, className, position, infoTopPosition)
                 showInfo(svg, className, d);
             })
           	.on('mouseout', function(d){
-              	svg
+              	graphContainer
 					.selectAll("path.item")
 					.transition()
 					.attr("stroke-width", "2")
@@ -226,15 +210,20 @@ function showInfo(svg, className, d)
 }
 
 var size = {
-  width: Math.floor($(document).width() * 0.9),
+  width: Math.floor($(document).width() * 0.95),
   height: Math.floor($(document).height() * 0.9),
+  svgwidth: Math.floor($(document).width() * 0.95),
+  svgheight: Math.floor($(document).height() * 0.9),
   margin:20
 };
 
 if (size.width < 900) size.width = 900;
-if (size.height < 700) size.height = 700;
+if (size.height < 600) {
+	size.height = 600;
+	size.svgheight = 600;
+}
 
-$(".resume").css('width', size.width + 'px');
+$(".resume").css('width', size.svgwidth + 'px');
 
 var formatToShow = d3.time.format("%m/%d/%Y");
 var format = d3.time.format("%Y-%m-%d");
@@ -243,8 +232,11 @@ var parseDate = format.parse;
 var svg = d3
 		.select("article.resume")
 		.append('svg')
-      		.attr("width", size.width)
-      		.attr("height", size.height);
+      		.attr("width", size.svgwidth)
+      		.attr("height", size.svgheight)
+      		.on('scroll', function(){
+      			console.log('scroll');
+      		});
 
 var topSemicircle = d3.select("#top");
 
@@ -278,10 +270,15 @@ d3.json('/data/resume.json',function(error, data){
 
 	calculateDiameter(data.experience);
 	calculateDiameter(data.study);
+
+	var graphContainer = svg
+		.append("g")
+		.attr("class", "graph-container")
+		.attr("transform", "translate(" + [0,size.height - 200] + ")");;
 	
-	var xAxilsEl = svg.append("g")
+	var xAxilsEl = graphContainer.append("g")
 			.attr("class", "x axis")
-			.attr("transform", "translate(0," + Math.floor(size.height/2) + ")")
+			.attr("transform", "translate(0," + 0 + ")")
 			.call(xAxis);
 
 	xAxilsEl.selectAll("path")
@@ -295,7 +292,59 @@ d3.json('/data/resume.json',function(error, data){
 			.style("fill", "white")
 			.attr("transform", "rotate(-60)");
 
-	loadItems(svg, data.experience, "experience", -1, size.height / 8);
-	loadItems(svg, data.study, "study", 1, size.height / 8);
+	graphContainer.append('text')
+			.style("fill", "white")
+			.classed('label',true)
+			.attr("font-size","18px")
+			.text('WORKS')
+			.style("text-anchor", "center")
+			.attr("transform", "translate("+[15,- 25]+") rotate(-90)");
+
+	graphContainer.append('text')
+			.style("fill", "white")
+			.classed('label',true)
+			.attr("font-size","18px")
+			.text('STUDIES')
+			.style("text-anchor", "center")
+			.attr("transform", "translate("+[15,100]+") rotate(-90)");
+
+	loadItems(svg, graphContainer, data.experience, "experience", -1, size.height / 8);
+	loadItems(svg, graphContainer, data.study, "study", 1, size.height / 8);
+
+	$( "svg" ).on( "touchstart", swipeStartHandler );
+	$( "svg" ).on( "touchmove", swipeHandler );
+	$( "svg" ).on( "touchend", swipeEndHandler );
 
 });
+
+var touchStart = null;
+var graphPosition = 0;
+function swipeStartHandler( event ){
+	touchStart = event.originalEvent.touches[0].clientX;
+}
+function swipeEndHandler( event ){
+	
+}
+function swipeHandler( event ){
+	if (touchStart == null) return;
+
+	touchMove = event.originalEvent.touches[0].clientX;
+	var delta = touchMove - touchStart;
+	
+	graphPosition = graphPosition + delta;
+
+	if (graphPosition > 0)
+	{
+		graphPosition = 0;
+	}
+	if (graphPosition < -1 * (size.width - size.svgwidth))
+	{
+		graphPosition = -1 * (size.width - size.svgwidth);
+	}
+
+	d3.select("g.graph-container").attr("transform", "translate(" + [graphPosition,size.height - 200] + ")");
+
+	touchStart = touchMove;
+}
+
+
