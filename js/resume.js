@@ -80,7 +80,7 @@ function loadItems(svg, graphContainer, data, className, position, infoTopPositi
 			.attr('class',function(d){ return className + d.id })
 			.classed('info',true)
 			.classed(className,true)
-			.attr("transform", "translate("+[size.svgwidth*0.01,infoTopPosition]+")")
+			.attr("transform", "translate("+[size.svgwidth*0.1,infoTopPosition]+")")
 			.attr("fill-opacity", 0);
 
 	gInfo.append('text')
@@ -208,9 +208,9 @@ function showInfo(svg, className, d)
 }
 
 var size = {
-  width: Math.floor($(document).width() * 0.95),
+  width: $(document).width(),
   height: Math.floor($(document).height() * 0.9),
-  svgwidth: Math.floor($(document).width() * 0.95),
+  svgwidth: $(document).width(),
   svgheight: Math.floor($(document).height() * 0.9),
   margin:20
 };
