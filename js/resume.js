@@ -80,7 +80,7 @@ function loadItems(svg, graphContainer, data, className, position, infoTopPositi
 			.attr('class',function(d){ return className + d.id })
 			.classed('info',true)
 			.classed(className,true)
-			.attr("transform", "translate(50,"+infoTopPosition+")")
+			.attr("transform", "translate("+[size.svgwidth*0.01,infoTopPosition]+")")
 			.attr("fill-opacity", 0);
 
 	gInfo.append('text')
@@ -190,8 +190,7 @@ function hideInfo()
 {
 	svg
 		.selectAll("g.info")
-		.transition()
-	    	.attr("fill-opacity", 0); 
+	    .attr("fill-opacity", 0);
 }
 function showInfo(svg, className, d)
 {
@@ -205,8 +204,7 @@ function showInfo(svg, className, d)
 
     svg
 		.selectAll("g.info."+className+"."+className+d.id)
-		.transition()
-	    	.attr("fill-opacity", 1); 
+	    .attr("fill-opacity", 1);
 }
 
 var size = {
@@ -217,13 +215,16 @@ var size = {
   margin:20
 };
 
-if (size.width < 900) size.width = 900;
+if (size.width < 900) {
+	size.width = 900;
+	size.svgwidth = 900;
+}
 if (size.height < 600) {
 	size.height = 600;
 	size.svgheight = 600;
 }
 
-$(".resume").css('width', size.svgwidth + 'px');
+$(".resume").css('width', $(document).width() + 'px');
 
 var formatToShow = d3.time.format("%m/%d/%Y");
 var format = d3.time.format("%Y-%m-%d");
@@ -310,11 +311,11 @@ d3.json('/data/resume.json',function(error, data){
 
 	loadItems(svg, graphContainer, data.experience, "experience", -1, size.height / 8);
 	loadItems(svg, graphContainer, data.study, "study", 1, size.height / 8);
-
+/*
 	$( "svg" ).on( "touchstart", swipeStartHandler );
 	$( "svg" ).on( "touchmove", swipeHandler );
 	$( "svg" ).on( "touchend", swipeEndHandler );
-
+*/	
 });
 
 var touchStart = null;
