@@ -2,15 +2,13 @@ $(document).ready(function(){
 	checkHash();
 
 	$('a').click(function(){
-		_gaq.push(['_trackEvent', 'link', 'click', this.href]);
-	    //ga('send', 'event', 'link', 'click', this.href);
+	    ga('send', 'event', 'link', 'load', this.href);
 	});
 });
 function checkHash()
 {
 	var hash = window.location.hash;
-	_gaq.push(['_trackEvent', 'link', 'click', hash]);
-	//ga('send', 'event', 'link', 'click', hash);
+	ga('send', 'event', 'link', 'click', hash);
     loadArticle(hash);
 }
 function showArticle(url)
@@ -22,7 +20,7 @@ function loadArticle(hash)
 {
     var pages = {
         '#about-me':'.main',
-        '#experience':'.resume',
+        '#experience':'.resume'
     };
     var selector = pages[hash];
     if (selector != undefined)

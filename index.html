@@ -9,12 +9,7 @@
         <title>Germán Lena</title>
         <meta name="description" content="Germán Lena - IT Engineer, Web developer and Open Data enthusiast. PHP, Ruby on Rails and JS (D3 and AngularJs) developer.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/main.css">
-
+        <link rel="stylesheet" href="/css/all.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -26,54 +21,40 @@
                 <li><a href="#experience" onclick="showArticle(this.href)">Experience &amp; Studies</a></li>
             </ul>
         </nav>
-
         <article class="main">
             <header>
                 <h1>Germán Lena</h1>
             </header>
-
             <p>
                 I love music and sports (I usually go out running, rollerblading or swimming) but my real hobby is to program and learn new technologies.
             </p>
-
             <p>
                 Now, working on my own project about open data and data visualization (you can check it on <a href="http://datosdemocraticos.com.ar">Datos Democraticos</a> and <a href="http://reservashoy.com.ar">Reservas Hoy</a>).
             </p>
-
             <p>
                 I also love travelling and I have another project (<a href="http://saisiner.com">Saisiner</a>). It started with the excuse of track my own trip around Europe and now I am working to improve it and bring useful tools to sightseeing (from this word the name). I hope to finish the V2 soon.
             </p>
-
             <footer>
             <span class="about-text">Follow me on:</span>
 			<span class="about-icons">
-                <a href="https://github.com/glena"><img width="40" height="40" src="/img/icons/github.png" alt="Github" title="My Github Profile" /></a>
-                <a href="http://ar.linkedin.com/in/germanlena/"><img width="40" height="40" src="/img/icons/linkedin.png" alt="LinkedIn" title="My LinkedIn Profile" /></a>
-                <a href="https://twitter.com/german_lena"><img width="40" height="40" src="/img/icons/twitter.png" alt="Twitter" title="My Twitter Timeline" /></a>
-                <a href="http://www.flickr.com/photos/german_lena/"><img width="40" height="40" src="/img/icons/flickr.png" alt="Flickr" title="My Flickr Gallery" /></a>
+                <a href="https://github.com/glena" class="github">Github</a>
+                <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin">LinkedIn</a>
+                <a href="https://twitter.com/german_lena" class="twitter">Twitter</a>
+                <a href="http://www.flickr.com/photos/german_lena/" class="flickr">Flickr</a>
 			</span>
             </footer>
         </article>
         <article class="resume">
         </article>
-            
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="/js/vendor/jquery.backstretch.min.js"></script>
-        <script>$.backstretch("../img/backgrounds/image015.jpg");</script>
-        <script src="/js/vendor/d3.v3.min.js"></script>
-        <script src="/js/resume.js"></script>
-        <script src="/js/main.js"></script>
         <script>
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-32429094-1']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-32429094-1', 'germanlena.com.ar');
+            ga('send', 'pageview');
         </script>
+        <script src="/js/all.js"></script>
     </body>
 </html>

@@ -52,7 +52,7 @@ h3{orphans:3;widows:3;}
 h2,
 h3{page-break-after:avoid;}
 }
-/* OWN CSS */
+/*! MY OWN CSS */
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 html {height: 100%;}
 body{
@@ -79,7 +79,7 @@ article.main header h1{
 article.main footer {
     border-top: 1px solid #BBB;
     line-height: 40px;
-    padding: 5px 0 0;
+    padding: 10px 0 0;
 }
 article.main footer .about-text{
     font-weight: bold;
@@ -123,6 +123,28 @@ nav ul li {
 nav ul li a {
     text-shadow:none;
 }
+article footer .about-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: 100% auto;
+    color:transparent;
+    border-radius: 25px;
+    padding:5px;
+    text-shadow: none;
+}
+article footer .about-icons a.github {
+    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -53px center;
+}
+article footer .about-icons a.twitter {
+    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -150px center;
+}
+article footer .about-icons a.linkedin {
+    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -100px center;
+}
+article footer .about-icons a.flickr {
+    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -5px center;
+}
 @media all and (max-width: 410px) {
     nav {
         position: static;
@@ -143,38 +165,3 @@ nav ul li a {
         padding:7px;
     }
 }
-/*
-div.item-info {
-    height: 300px;
-}
-div.item-info p{
-    display: none;
-    margin: 0;
-}
-div.item-info.visible p{
-    display: block;
-}
-p.type {
-    color:#FFFFFF;
-    font-size:18px;
-}
-p.institution{
-    color:#FFFFFF;
-    font-size:18px;
-    font-weight: bold;
-}
-p.title{
-    color:#FFFFFF;
-    font-size:23px;
-    font-weight: bold;
-}
-p.dates{
-    color:#FFFFFF;
-    font-size:14px;
-    font-weight: bold;
-}
-p.description{
-    color:#FFFFFF;
-    font-size:14px;
-}
-*/

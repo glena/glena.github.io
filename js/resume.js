@@ -1,46 +1,19 @@
-d3.selection.prototype.moveToFront = function() {
-	return this.each(function(){
-		this.parentNode.appendChild(this);
-	});
-};
-function getPathCommandsTop(diameter)
-{
-	var radius = diameter/2;
-	return "M"+diameter+","+radius+" h0 a"+radius+","+radius+" 0 0,0 -"+diameter+",0 z";
-}
-function getPathCommandsBottom(diameter)
-{
-	var radius = diameter/2;
-	return "M0,0 h0 a"+radius+","+radius+" 0 0,0 "+diameter+",0 z";
-}
 function getPathCommandsQuadratic(diameter, position)
 {
 	var radius = diameter/2;
 	var height = position * (100 + radius * 0.7);
 	return "M0,0 q "+radius+" "+height+" "+diameter+" 0 z";
 }
-var lastFill = null;
-function getFill() {
-	var fill;
-	do{
-		var colors = [
-			'#ff0000',
-			'#3577c4',
-			'#ffaa00',
-			'#ffff00',
-			'#74c425', 
-			'#940bdd', 
-			'#00f6ff', 
-			'#ff00c3', 
-			'#8e6d2c', 
-			'#ffffff', 
-			'#b2ff00'
-		];
-		var index = Math.floor((Math.random()*(colors.length-1))+1);
-		fill = colors[index];
-	} while (fill == lastFill);
-	lastFill = fill;
-	return fill;
+var sha1Hash = function (str) {
+    return CryptoJS.SHA1(str).toString(CryptoJS.enc.Hex);
+}
+function hex(x, n) {
+    var leadingZeroes = Array(n).join('0');
+    return (leadingZeroes + x.toString(16)).substr(-n);
+}
+function getFill(name) {
+	var hex6 = hex(sha1Hash(name), 6);
+	return '#' + hex6.split("").reverse().join("");
 }
 function normalize(data)
 {
@@ -151,8 +124,8 @@ function loadItems(svg, graphContainer, data, className, position, infoTopPositi
 			.append("path")
 			.classed(className,true)
 			.classed('item',true)
-	        .attr("fill", getFill)
-	        .attr("fill-opacity", 0.5)
+	        .attr("fill", function (d){return getFill(d.title)})
+	        .attr("fill-opacity", 0.6)
 	        .attr("stroke", "#FFFFFF")
 	        .attr("stroke-width", "2")	
 	        .attr("d",function(d){ return getPathCommandsQuadratic(d.diameter, position); })
@@ -311,41 +284,4 @@ d3.json('/data/resume.json',function(error, data){
 
 	loadItems(svg, graphContainer, data.experience, "experience", -1, size.height / 8);
 	loadItems(svg, graphContainer, data.study, "study", 1, size.height / 8);
-/*
-	$( "svg" ).on( "touchstart", swipeStartHandler );
-	$( "svg" ).on( "touchmove", swipeHandler );
-	$( "svg" ).on( "touchend", swipeEndHandler );
-*/	
 });
-
-var touchStart = null;
-var graphPosition = 0;
-function swipeStartHandler( event ){
-	touchStart = event.originalEvent.touches[0].clientX;
-}
-function swipeEndHandler( event ){
-	
-}
-function swipeHandler( event ){
-	if (touchStart == null) return;
-
-	touchMove = event.originalEvent.touches[0].clientX;
-	var delta = touchMove - touchStart;
-	
-	graphPosition = graphPosition + delta;
-
-	if (graphPosition > 0)
-	{
-		graphPosition = 0;
-	}
-	if (graphPosition < -1 * (size.width - size.svgwidth))
-	{
-		graphPosition = -1 * (size.width - size.svgwidth);
-	}
-
-	d3.select("g.graph-container").attr("transform", "translate(" + [graphPosition,size.height - 200] + ")");
-
-	touchStart = touchMove;
-}
-
-
