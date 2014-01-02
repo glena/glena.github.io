@@ -1,4 +1,3 @@
-$.backstretch("../img/backgrounds/image015.jpg");
 $(document).ready(function(){
 	checkHash();
 
