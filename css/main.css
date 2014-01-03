@@ -58,7 +58,8 @@ html {height: 100%;}
 body{
     margin:0;
     font: normal 14px/1.5  'Roboto Condensed', sans-serif;
-    background: #99A0A6;
+    background: #99A0A6 url('/img/backgrounds/image015.jpg') no-repeat center center;
+    background-size: cover;
     height: 100%;
 }
 
