@@ -19,13 +19,23 @@ function showArticle(url)
 function loadArticle(hash)
 {
     var pages = {
-        '#about-me':'.main',
-        '#experience':'.resume'
+        '#about-me':{
+            selector:'.main',
+            blur:false
+        },
+        '#experience':{
+            selector:'.resume',
+            blur:true
+        }
     };
-    var selector = pages[hash];
-    if (selector != undefined)
+    var page = pages[hash];
+    if (page != undefined)
     {
         $('article').hide();
-        $(selector).show();
+        $(page.selector).show()
+        if (page.blur)
+            $('.background-holder').addClass('blur');
+        else
+            $('.background-holder').removeClass('blur');
     }
 }
