@@ -33,9 +33,9 @@ function loadArticle(hash)
     {
         $('article').hide();
         $(page.selector).show()
-        if (page.blur)
+        /*if (page.blur)
             $('.background-holder').addClass('blur');
         else
-            $('.background-holder').removeClass('blur');
+            $('.background-holder').removeClass('blur');*/
     }
 }
