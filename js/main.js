@@ -32,7 +32,7 @@ function loadArticle(hash)
     if (page != undefined)
     {
         $('article').hide();
-        $(page.selector).show()
+        $(page.selector).show();
         /*if (page.blur)
             $('.background-holder').addClass('blur');
         else
