@@ -35,7 +35,7 @@
 		{
 			"type":"Work",
 			"institution":"DigBang",
-			"title":"Team Leader",
+			"title":"Project Leader",
 			"from":"2013-06-01",
 			"to":null,
 			"description":"Definitions of technical requirements in detail. Task assignment and resource coordination.\nDefinition and architecture design. Developers support.\nPlatform: Linux / Apache\nTecnologies: PHP, PostgresSQL, MySQL, XHTML, AJAX, JS, CSS, Ext MVC"
