@@ -116,6 +116,7 @@ article.resume {
     margin:auto;
     display:none;
     overflow: auto;
+    width: 95%;
 }
 nav {
     position: absolute;
