@@ -67,7 +67,7 @@ body .background-holder{
     position: fixed;
     top:0;
     left:0;
-    background: #99A0A6 url('/img/backgrounds/image015.jpg') no-repeat center center;
+    background: #99A0A6 url('/img/backgrounds/image0019.jpg') no-repeat center center;
     background-size: cover;
     z-index: -1;
 }
@@ -81,6 +81,7 @@ article.main {
     color:#FFFFFF;
     padding: 10% 10%;
 	text-shadow: 3px 3px 15px #000000;
+    float: right;
 }
 article.main header {
     border-bottom: 1px solid #BBB;
@@ -131,7 +132,7 @@ nav ul li {
     float:left;
     padding: 10px;
     line-height: 15px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.7);
     margin-right: 1px;
 }
 nav ul li a {
