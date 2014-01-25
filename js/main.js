@@ -20,12 +20,10 @@ function loadArticle(hash)
 {
     var pages = {
         '#about-me':{
-            selector:'.main',
-            blur:false
+            selector:'.main'
         },
         '#experience':{
-            selector:'.resume',
-            blur:true
+            selector:'.resume'
         }
     };
     var page = pages[hash];
@@ -33,9 +31,5 @@ function loadArticle(hash)
     {
         $('article').hide();
         $(page.selector).show();
-        /*if (page.blur)
-            $('.background-holder').addClass('blur');
-        else
-            $('.background-holder').removeClass('blur');*/
     }
 }
