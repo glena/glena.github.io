@@ -10,13 +10,14 @@
         <meta name="description" content="Germán Lena - IT Engineer, Web developer and Open Data enthusiast. PHP, Ruby on Rails and JS (D3 and AngularJs) developer.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/all.css">
+        <link rel="stylesheet" href="/css/animate.css">
     </head>
     <body>
         <div class="background-holder"></div>
     <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser and the experience section is not enabled for this browser :(. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-        <nav>
+        <nav class="fadeInDown wow animated">
             <ul>
                 <li><a href="#about-me" onclick="showArticle(this.href)">About Me</a></li>
                 <li><a href="#experience" onclick="showArticle(this.href)">Experience &amp; Studies</a></li>
@@ -24,7 +25,7 @@
         </nav>
 
 
-        <article class="main">
+        <article class="main fadeIn wow animated">
             <header>
                 <h1>Germán Lena</h1>
             </header>
@@ -40,14 +41,14 @@
             <footer>
             <span class="about-text">Follow me on:</span>
 			<span class="about-icons">
-                <a href="https://github.com/glena" class="github">Github</a>
-                <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin">LinkedIn</a>
-                <a href="https://twitter.com/german_lena" class="twitter">Twitter</a>
-                <a href="http://www.flickr.com/photos/german_lena/" class="flickr">Flickr</a>
+                <a href="https://github.com/glena" class="github wow rollIn animated">Github</a>
+                <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin wow rollIn animated">LinkedIn</a>
+                <a href="https://twitter.com/german_lena" class="twitter wow rollIn animated">Twitter</a>
+                <a href="http://www.flickr.com/photos/german_lena/" class="flickr wow rollIn animated">Flickr</a>
 			</span>
             </footer>
         </article>
-        <article class="resume">
+        <article class="resume fadeInDown wow animated">
         </article>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -57,6 +58,7 @@
             ga('create', 'UA-32429094-1', 'germanlena.com.ar');
             ga('send', 'pageview');
         </script>
+        <script src="/js/wow.js"></script>
         <script src="/js/all.js"></script>
     </body>
 </html>
