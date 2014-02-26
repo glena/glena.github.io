@@ -1,12 +1,13 @@
 var height,width,resume;
-
 $(document).ready(function(){
-
-	$('a').click(function(){
-	    ga('send', 'event', 'link', 'load', this.href);
-	});
-
-    //$('body').scrollspy({ target: '.navbar-top' });
+    $('a').click(function(){
+        
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        ga('send', 'event', 'link', 'load', this.href);
+        return false;
+    });
 
     height = $(document).height();
 
@@ -47,3 +48,21 @@ $(document).ready(function(){
 
 });
 
+
+var prevScrollPos = null;
+(function() {
+    $( window ).scroll(function(e) {
+        var scrollPos = $( window ).scrollTop();
+
+        if (scrollPos > prevScrollPos)
+        {
+            $('#btt').addClass('slide-reset').removeClass('slide-down');
+        }
+        else if (scrollPos < prevScrollPos)
+        {
+            $('#btt').addClass('slide-down').removeClass('slide-reset');
+        }
+
+        prevScrollPos = scrollPos;
+    });
+}());

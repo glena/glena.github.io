@@ -2,11 +2,10 @@
 ::selection{background:#b3d4fc;text-shadow:none;}
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
-/*html {height: 100%;}*/
+
 body{
     margin:0;
     font: normal 14px/1.5  'Roboto Condensed', sans-serif;
-    /*height: 100%;*/
 }
 
 a {
@@ -15,7 +14,7 @@ a {
     font-weight: bold;
 }
 a:visited{color: #FF0085;}
-a:hover{text-decoration: underline;}
+a:hover{text-decoration: underline;color: #FF0085;}
 a img {border:none;}
 
 body .background-holder{
@@ -67,13 +66,16 @@ section#experience {
     width: 100%;
     min-height: 100px;
 }
-nav {
+#navHeader {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0; 
+    z-index: 999;
+    width: 100%;
+}
+nav {
     padding-left: 10%;
     width: 100%;
-    z-index: 999;
     background: #FFFFFF;
 }
 nav ul {
@@ -130,6 +132,35 @@ section footer .about-icons a.linkedin {
 section footer .about-icons a.flickr {
     background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -5px center;
 }
+#btt {
+    border-radius: 5px 5px 0 0;
+    background-color: #FFFFFF;
+    padding: 5px;
+    left: 10px;
+    position: fixed;
+    bottom:0;
+    display: block;
+    -webkit-transform: translateY(31px);
+    -ms-transform: translateY(31px);
+    transform: translateY(31px);
+}
+#btt.slide {
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+}
+#btt.slide-down {
+    -webkit-transform: translateY(31px);
+    -ms-transform: translateY(31px);
+    transform: translateY(31px);
+}
+#btt.slide-reset {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
 @media all and (max-width: 410px) {
     nav {
         position: static;

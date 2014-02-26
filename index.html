@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/animate.css">
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body data-spy="scroll" data-target=".navbar-top">
@@ -18,13 +19,14 @@
     <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser and the experience section is not enabled for this browser :(. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-        <nav class="navbar-top">
-            <ul class="nav">
-                <li><span class="glyphicon glyphicon-hand-right"></span><a href="#about-me" >About Me</a></li>
-                <li><span class="glyphicon glyphicon-hand-right"></span><a href="#experience" >Experience &amp; Studies</a></li>
-            </ul>
-        </nav>
-
+        <div id="navHeader">
+            <nav class="navbar-top">
+                <ul class="nav">
+                    <li><span class="glyphicon glyphicon-hand-right"></span><a href="#about-me" >About Me</a></li>
+                    <li><span class="glyphicon glyphicon-hand-right"></span><a href="#experience" >Experience &amp; Studies</a></li>
+                </ul>
+            </nav>
+        </div>
 
         <section id="about-me">
             <header>
@@ -44,16 +46,18 @@
             <footer>
                 <span class="about-text">Follow me on:</span>
     			<span class="about-icons">
-                    <a href="https://github.com/glena" class="github wow rollIn animated">Github</a>
-                    <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin wow rollIn animated">LinkedIn</a>
-                    <a href="https://twitter.com/german_lena" class="twitter wow rollIn animated">Twitter</a>
-                    <a href="http://www.flickr.com/photos/german_lena/" class="flickr wow rollIn animated">Flickr</a>
+                    <a href="https://github.com/glena" class="github wow tada animated">Github</a>
+                    <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin wow tada animated">LinkedIn</a>
+                    <a href="https://twitter.com/german_lena" class="twitter wow tada animated">Twitter</a>
+                    <a href="http://www.flickr.com/photos/german_lena/" class="flickr wow tada animated">Flickr</a>
     			</span>
             </footer>
         </section>
 
         <section id="experience">
         </section>
+
+        <a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
 
         <script src="/js/vendor/jquery-1.11.0.min.js"></script>
         <script src="/bootstrap/js/bootstrap.min.js"></script>
