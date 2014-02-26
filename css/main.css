@@ -2,12 +2,21 @@
 ::selection{background:#b3d4fc;text-shadow:none;}
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
-html {height: 100%;}
+/*html {height: 100%;}*/
 body{
     margin:0;
     font: normal 14px/1.5  'Roboto Condensed', sans-serif;
-    height: 100%;
+    /*height: 100%;*/
 }
+
+a {
+    color: #FF0085;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited{color: #FF0085;}
+a:hover{text-decoration: underline;}
+a img {border:none;}
 
 body .background-holder{
     height: 100%;
@@ -23,49 +32,40 @@ body .background-holder.blur{
     -webkit-filter: blur(3px); -moz-filter: blur(3px); -o-filter: blur(3px); -ms-filter: blur(3px); filter: blur(3px);
 }
 
-article.main {
-    max-width: 500px;
+section#about-me {
+    max-width: 650px;
     font-size: 16px;
     color:#FFFFFF;
-    padding: 10% 10%;
-	text-shadow: 3px 3px 15px #000000;
     float: right;
 }
-article.main header {
-    border-bottom: 1px solid #BBB;
+section#about-me header {
+    padding: 0 10px;
+    border-bottom: 1px solid #FFFFFF;
 }
-article.main header h1{
+section#about-me article {
+    padding: 0 10px;
+}
+section#about-me header h1{
     margin:0;
     font-weight: normal;
 }
-article.main footer {
-    border-top: 1px solid #BBB;
+section#about-me footer {
+    padding: 10px 10px 0;
+    border-top: 1px solid #FFFFFF;
     line-height: 40px;
-    padding: 10px 0 0;
 }
-article.main footer .about-text{
+section#about-me footer .about-text{
     font-weight: bold;
 }
-article.main footer a{
+section#about-me footer a{
     margin-left: 10px;
 }
-a, a:visited{
-    color: #FF0085;
-	text-decoration: none;
-	font-weight: bold;
-	text-shadow: 0px 3px 15px #FFFFFF;
-}
-a:hover{
-    text-decoration: underline;
-}
-a img {
-    border:none;
-}
-article.resume {
+
+section#experience {
     margin:auto;
-    display:none;
     overflow: auto;
-    width: 95%;
+    width: 100%;
+    min-height: 100px;
 }
 nav {
     position: fixed;
@@ -74,58 +74,74 @@ nav {
     padding-left: 10%;
     width: 100%;
     z-index: 999;
-    background: rgba(255,255,255,0.6);
+    background: #FFFFFF;
 }
 nav ul {
     margin: 0;
     padding: 0;
 }
-nav ul li:first-child {
-    border-left: 1px solid #FFFFFF;
-}
 nav ul li {
     float:left;
-    padding: 10px;
+    padding: 15px 10px 10px;
     line-height: 15px;
-    border-right: 1px solid #FFFFFF;
+    border-right: 1px dotted #CCCCCC;
 }
-nav ul li a {
-    text-shadow:none;
+nav ul li:last-child {
+    border-right: none;
 }
-article footer .about-icons a {
+.nav>li>a {
+    padding: 0;
+    display: inline;
+    line-height: 20px;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: underline;
+    background-color: transparent;
+}
+.nav>li.active {
+    background: rgba(255,255,255,1);
+}
+nav ul li .glyphicon{
+    display: none;
+}
+nav ul li.active .glyphicon{
+    display: inline;
+    margin-right: 5px;
+}
+section footer .about-icons a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-size: 100% auto;
     color:transparent;
     border-radius: 25px;
     padding:5px;
     text-shadow: none;
 }
-article footer .about-icons a.github {
+section footer .about-icons a.github {
     background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -53px center;
 }
-article footer .about-icons a.twitter {
+section footer .about-icons a.twitter {
     background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -150px center;
 }
-article footer .about-icons a.linkedin {
+section footer .about-icons a.linkedin {
     background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -100px center;
 }
-article footer .about-icons a.flickr {
+section footer .about-icons a.flickr {
     background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -5px center;
 }
 @media all and (max-width: 410px) {
     nav {
         position: static;
     }
-    article footer .about-text {
+    section footer .about-text {
         display: block;
     }
-    article footer .about-icons {
+    section footer .about-icons {
         text-align: center;
         display: block;
     }
-    article footer a {
+    section footer a {
         margin: auto;
     }
 }

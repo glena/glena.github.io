@@ -74,19 +74,19 @@ var d3Resume = function(_config){
 
 		graphContainer.append('text')
 				.style("fill", "white")
-				.classed('label',true)
-				.attr("font-size","18px")
+				.classed('axis-label',true)
+				.attr("font-size","17px")
 				.text('WORKS')
 				.style("text-anchor", "center")
-				.attr("transform", "translate("+[15,- 55]+") rotate(-90)");
+				.attr("transform", "translate("+[25,- 55]+") rotate(-90)");
 
 		graphContainer.append('text')
 				.style("fill", "white")
-				.classed('label',true)
-				.attr("font-size","18px")
+				.classed('axis-label',true)
+				.attr("font-size","17px")
 				.text('STUDIES')
 				.style("text-anchor", "center")
-				.attr("transform", "translate("+[15,130]+") rotate(-90)");
+				.attr("transform", "translate("+[25,130]+") rotate(-90)");
 
 		loadItems(svg, graphContainer, data.experience, "experience", -1, config.height / 8);
 		loadItems(svg, graphContainer, data.study, "study", 1, config.height / 8);
@@ -250,17 +250,3 @@ var d3Resume = function(_config){
 
 	init();
 }
-
-var width = $(document).width() * 0.95;
-var height = $(document).height() * 0.95;
-
-if (width < 900) width = 900;
-if (height < 600) height = 600;
-
-var resume = new d3Resume({
-  width: width,
-  height: height,
-  wrapperSelector: "article.resume",
-  dataUrl: '/data/resume.json'
-});
-

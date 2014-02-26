@@ -9,48 +9,58 @@
         <title>Germán Lena</title>
         <meta name="description" content="Germán Lena - IT Engineer, Web developer and Open Data enthusiast. PHP, Ruby on Rails and JS (D3 and AngularJs) developer.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/animate.css">
         <link rel="stylesheet" href="/css/main.css">
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar-top">
         <div class="background-holder"></div>
     <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser and the experience section is not enabled for this browser :(. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-        <nav class="fadeInDown wow animated">
-            <ul>
-                <li><a href="#about-me" onclick="showArticle(this.href)">About Me</a></li>
-                <li><a href="#experience" onclick="showArticle(this.href)">Experience &amp; Studies</a></li>
+        <nav class="navbar-top">
+            <ul class="nav">
+                <li><span class="glyphicon glyphicon-hand-right"></span><a href="#about-me" >About Me</a></li>
+                <li><span class="glyphicon glyphicon-hand-right"></span><a href="#experience" >Experience &amp; Studies</a></li>
             </ul>
         </nav>
 
 
-        <article class="main fadeIn wow animated">
+        <section id="about-me">
             <header>
                 <h1>Germán Lena</h1>
             </header>
-            <p>
-                I love music and sports (I usually go out running, rollerblading or swimming) but my real hobby is to program and learn new technologies.
-            </p>
-            <p>
-                Now, working on my own project about open data and data visualization (you can check it on <a href="http://datosdemocraticos.com.ar">Datos Democraticos</a> and <a href="http://reservashoy.com.ar">Reservas Hoy</a>).
-            </p>
-            <p>
-                I also love travelling and I have another project (<a href="http://saisiner.com">Saisiner</a>). It started with the excuse of track my own trip around Europe and now I am working to improve it and bring useful tools to sightseeing (from this word the name). I hope to finish the V2 soon.
-            </p>
+            <article>
+                <p>
+                    I love music and sports (I usually go out running, rollerblading or swimming) but my real hobby is to program and learn new technologies.
+                </p>
+                <p>
+                    Now, working on my own project about open data and data visualization (you can check it on <a href="http://datosdemocraticos.com.ar">Datos Democraticos</a> and <a href="http://reservashoy.com.ar">Reservas Hoy</a>).
+                </p>
+                <p>
+                    I also love travelling and I have another project (<a href="http://saisiner.com">Saisiner</a>). It started with the excuse of track my own trip around Europe and now I am working to improve it and bring useful tools to sightseeing (from this word the name). I hope to finish the V2 soon.
+                </p>
+            </article>
             <footer>
-            <span class="about-text">Follow me on:</span>
-			<span class="about-icons">
-                <a href="https://github.com/glena" class="github wow rollIn animated">Github</a>
-                <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin wow rollIn animated">LinkedIn</a>
-                <a href="https://twitter.com/german_lena" class="twitter wow rollIn animated">Twitter</a>
-                <a href="http://www.flickr.com/photos/german_lena/" class="flickr wow rollIn animated">Flickr</a>
-			</span>
+                <span class="about-text">Follow me on:</span>
+    			<span class="about-icons">
+                    <a href="https://github.com/glena" class="github wow rollIn animated">Github</a>
+                    <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin wow rollIn animated">LinkedIn</a>
+                    <a href="https://twitter.com/german_lena" class="twitter wow rollIn animated">Twitter</a>
+                    <a href="http://www.flickr.com/photos/german_lena/" class="flickr wow rollIn animated">Flickr</a>
+    			</span>
             </footer>
-        </article>
-        <article class="resume fadeInDown wow animated">
-        </article>
+        </section>
+
+        <section id="experience">
+        </section>
+
+        <script src="/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/js/vendor/d3.v3.min.js"></script>
+        <script src="/js/vendor/sha1.js"></script>
+        <script src="/js/resume.js"></script>
+        <script src="/js/main.js"></script>
 
         <script>
         /*
@@ -62,12 +72,5 @@
             ga('send', 'pageview');
         */
         </script>
-
-        <script src="/js/vendor/wow.js"></script>
-        <script src="/js/vendor/d3.v3.min.js"></script>
-        <script src="/js/vendor/sha1.js"></script>
-        <script src="/js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="/js/resume.js"></script>
-        <script src="/js/main.js"></script>
     </body>
 </html>
