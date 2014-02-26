@@ -19,13 +19,28 @@ $(document).ready(function(){
         });
 
     width = $(document).width();
+    var svgHeight = height * 0.8;
 
     if (width < 900) width = 900;
-    if (height < 600) height = 600;
+    
+    if (svgHeight < 600) 
+    {
+        svgHeight = 600;
+    }    
+    else
+    {
+        $('#experience')
+            .css('padding-top', function(e){
+                return height/2 - svgHeight / 2;
+            })
+            .css('padding-bottom', function(e){
+                return height/2 - svgHeight / 2;
+            });
+    }
 
     resume = new d3Resume({
       width: width,
-      height: height,
+      height: svgHeight,
       wrapperSelector: "#experience",
       dataUrl: '/data/resume.json'
     });
