@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="/css/animate.css">
         <link rel="stylesheet" href="/css/main.css">
         
-        <title>Germán Lena</title>
+        <title>About Me</title>
         <meta name="description" content="">
     </head>
     
@@ -36,20 +36,11 @@
         <script src="/bootstrap/js/bootstrap.min.js"></script>
         <script src="/js/main.js"></script>
 
-        <div id="navHeader">
-    <nav class="navbar-top">
-        <ul class="nav">
-            
-            <li><span class="glyphicon glyphicon-hand-right"></span><a href="#about-me" >About Me</a></li>
-            
-            <li><span class="glyphicon glyphicon-hand-right"></span><a href="#experience" >Experience &amp; Studies</a></li>
-            
-        </ul>
-    </nav>
-</div>
-        
+        <h2>About Me</h2>
+<p class="meta">06 Jun 2014</p>
 
-  <section id="about-me">    <header>
+<div class="post">
+    <header>
         <h1>Germán Lena</h1>
     </header>
     <article>
@@ -73,65 +64,8 @@
 		</span>
     </footer>
 
-</section>
 
-  <section id="experience"><script src="/js/vendor/d3.v3.min.js"></script>
-<script src="/js/vendor/sha1.js"></script>
-<script src="/js/resume.js"></script>
-<script src="/js/main.js"></script>
-
-<script>
-var height,width,resume;
-$(document).ready(function(){
-    $('a').click(function(){
-        
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
-        ga('send', 'event', 'link', 'load', this.href);
-        return false;
-    });
-
-    height = $(document).height();
-
-    $('#about-me')
-        .css('padding-top', function(e){
-            return height/2 - $(this).height() / 2;
-        })
-        .css('padding-bottom', function(e){
-            return height/2 - $(this).height() / 2;
-        });
-
-    width = $(document).width();
-    var svgHeight = height * 0.8;
-
-    if (width < 900) width = 900;
-    
-    if (svgHeight < 600) 
-    {
-        svgHeight = 600;
-    }    
-    else
-    {
-        $('#experience')
-            .css('padding-top', function(e){
-                return height/2 - svgHeight / 2;
-            })
-            .css('padding-bottom', function(e){
-                return height/2 - svgHeight / 2;
-            });
-    }
-
-    resume = new d3Resume({
-      width: width,
-      height: svgHeight,
-      wrapperSelector: "#experience",
-      dataUrl: '/data/resume.json'
-    });
-
-});
-</script>
-        </section>
+</div>
 
 
         <a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
