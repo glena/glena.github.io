@@ -73,26 +73,11 @@
 		</span>
     </footer>
 
-</section>
-
-  <section id="experience"><script src="/js/vendor/d3.v3.min.js"></script>
-<script src="/js/vendor/sha1.js"></script>
-<script src="/js/resume.js"></script>
-<script src="/js/main.js"></script>
-
 <script>
-var height,width,resume;
-$(document).ready(function(){
-    $('a').click(function(){
-        
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
-        ga('send', 'event', 'link', 'load', this.href);
-        return false;
-    });
 
-    height = $(document).height();
+$(document).ready(function(){
+    
+    var height = $(document).height();
 
     $('#about-me')
         .css('padding-top', function(e){
@@ -102,7 +87,17 @@ $(document).ready(function(){
             return height/2 - $(this).height() / 2;
         });
 
-    width = $(document).width();
+});
+</script></section>
+
+  <section id="experience"><script src="/js/vendor/d3.v3.min.js"></script>
+<script src="/js/vendor/sha1.js"></script>
+<script src="/js/resume.js"></script>
+
+<script>
+$(document).ready(function(){
+    var height = $(document).height();
+    var width = $(document).width();
     var svgHeight = height * 0.8;
 
     if (width < 900) width = 900;
@@ -122,21 +117,20 @@ $(document).ready(function(){
             });
     }
 
-    resume = new d3Resume({
+    var resume = new d3Resume({
       width: width,
       height: svgHeight,
       wrapperSelector: "#experience",
       dataUrl: '/data/resume.json'
     });
-
 });
 </script>
         </section>
 
 
-        <a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
+<a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
 
-        
+<script src="/js/main.js"></script>
 
         <script>
         /*

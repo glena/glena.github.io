@@ -15,3 +15,16 @@ var prevScrollPos = null;
         prevScrollPos = scrollPos;
     });
 }());
+
+$(document).ready(function(){
+    var height,width;
+    
+    $('a').click(function(){
+        
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        ga('send', 'event', 'link', 'load', this.href);
+        return false;
+    });
+});
