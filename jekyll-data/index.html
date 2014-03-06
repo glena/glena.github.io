@@ -1,0 +1,19 @@
+---
+layout: default
+title: Germán Lena
+metadescription: Germán Lena - IT Engineer, Web developer and Open Data enthusiast. PHP, Ruby on Rails and JS (D3 and AngularJs) developer.
+---
+
+<div id="navHeader">
+    <nav class="navbar-top">
+        <ul class="nav">
+            {% for post in site.posts %}
+            <li><span class="glyphicon glyphicon-hand-right"></span><a href="#{{ post.key }}" >{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
+        
+{% for post in site.posts %}
+  <section id="{{ post.key }}">{{ post.content }}</section>
+{% endfor %}
