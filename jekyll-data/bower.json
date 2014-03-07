@@ -1,0 +1,12 @@
+{
+  "name": "glena-profile",
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.0.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}

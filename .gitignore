@@ -1,2 +1,4 @@
 /jekyll-data/_site
 /jekyll-data/_site/*
+/jekyll-data/node_modules
+/jekyll-data/node_modules/*
