@@ -23,7 +23,7 @@ body .background-holder{
     position: fixed;
     top:0;
     left:0;
-    background: #99A0A6 url('/img/backgrounds/image0019.jpg') no-repeat center center;
+    background: #99A0A6 url('/assets/img/backgrounds/image0019.jpg') no-repeat center center;
     background-size: cover;
     z-index: -1;
 }
@@ -121,16 +121,16 @@ section footer .about-icons a {
     text-shadow: none;
 }
 section footer .about-icons a.github {
-    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -53px center;
+    background: rgba(60,60,60,0.4) url('/assets/img/icons/social-icons.png') no-repeat -53px center;
 }
 section footer .about-icons a.twitter {
-    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -150px center;
+    background: rgba(60,60,60,0.4) url('/assets/img/icons/social-icons.png') no-repeat -150px center;
 }
 section footer .about-icons a.linkedin {
-    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -100px center;
+    background: rgba(60,60,60,0.4) url('/assets/img/icons/social-icons.png') no-repeat -100px center;
 }
 section footer .about-icons a.flickr {
-    background: rgba(60,60,60,0.4) url('/img/icons/social-icons.png') no-repeat -5px center;
+    background: rgba(60,60,60,0.4) url('/assets/img/icons/social-icons.png') no-repeat -5px center;
 }
 #btt {
     border-radius: 5px 5px 0 0;
