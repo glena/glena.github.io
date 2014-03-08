@@ -44,6 +44,12 @@ module.exports = function(grunt) {
 
     }
 
+    ,'json-minify': {
+      build: {
+        files: 'jekyll-data/_site/assets/data/resume.json'
+      }
+    }
+
     ,cssmin: {
       combine: {
         files: {
@@ -115,6 +121,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-json-minify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -127,6 +134,7 @@ module.exports = function(grunt) {
     'cssmin', 
     'jekyll', 
     'copy:bootstrap', 
+    'json-minify', 
     'clean:build', 
     'clean:oldbuild', 
     'copy:deploy', 
