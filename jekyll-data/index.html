@@ -7,16 +7,39 @@ metadescription: Germán Lena - IT Engineer, Web developer and Open Data enthusi
 <div id="navHeader">
     <nav class="navbar-top">
         <ul class="nav">
-            {% for post in site.posts %}
-            <li><span class="glyphicon glyphicon-hand-right"></span><a href="#{{ post.key }}" >{{ post.title }}</a></li>
-            {% endfor %}
+        {% for post in site.posts %}
+        	{% if post.categories contains 'home' %}
+    		<li><span class="glyphicon glyphicon-hand-right"></span><a href="#{{ post.key }}" >{{ post.title }}</a></li>
+    		{% endif %}
+        {% endfor %}
+        	<li><span class="glyphicon glyphicon-hand-right"></span><a href="#projects" >Projects</a></li>
         </ul>
     </nav>
 </div>
         
 {% for post in site.posts %}
-  <section id="{{ post.key }}">{{ post.content }}</section>
+	{% if post.categories contains 'home' %}
+<section id="{{ post.key }}">{{ post.content }}</section>
+  	{% endif %}
 {% endfor %}
+
+<section id="projects">
+	<h2>Projects</h2>
+{% for post in site.posts %}
+	{% if post.categories contains 'project' %}
+		<article>{{ post.content }}</article>
+  	{% endif %}
+{% endfor %}
+</section>
+
+<script>
+    
+    var w = $(window).width();
+    var count = Math.floor(w/350);
+    var margin = Math.floor(((w - (350*count))/count)/2);
+    $('#projects article').css('margin', '10px ' + margin + 'px');
+
+</script>
 
 <a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
 

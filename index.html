@@ -34,17 +34,47 @@
         <div id="navHeader">
     <nav class="navbar-top">
         <ul class="nav">
-            
-            <li><span class="glyphicon glyphicon-hand-right"></span><a href="#about-me" >About Me</a></li>
-            
-            <li><span class="glyphicon glyphicon-hand-right"></span><a href="#experience" >Experience &amp; Studies</a></li>
-            
+        
+        	
+        
+        	
+        
+        	
+        
+        	
+        
+        	
+        
+        	
+        
+        	
+    		<li><span class="glyphicon glyphicon-hand-right"></span><a href="#about-me" >About Me</a></li>
+    		
+        
+        	
+    		<li><span class="glyphicon glyphicon-hand-right"></span><a href="#experience" >Experience &amp; Studies</a></li>
+    		
+        
+        	<li><span class="glyphicon glyphicon-hand-right"></span><a href="#projects" >Projects</a></li>
         </ul>
     </nav>
 </div>
         
 
-  <section id="about-me">    <header>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+<section id="about-me">    <header>
         <h1>Germán Lena</h1>
     </header>
     <article>
@@ -72,7 +102,7 @@
 
 $(document).ready(function(){
     
-    var height = $(document).height();
+    var height = $(window).height();
 
     $('#about-me')
         .css('padding-top', function(e){
@@ -84,13 +114,17 @@ $(document).ready(function(){
 
 });
 </script></section>
+  	
 
-  <section id="experience"><script src="/assets/js/resume.all.min.js"></script>
+	
+<section id="experience"><h2>Resume</h2>
+
+<script src="/assets/js/resume.all.min.js"></script>
 
 <script>
 $(document).ready(function(){
-    var height = $(document).height();
-    var width = $(document).width();
+    var height = $(window).height();
+    var width = $(window).width();
     var svgHeight = height * 0.8;
 
     if (width < 900) width = 900;
@@ -119,13 +153,74 @@ $(document).ready(function(){
 });
 </script>
         </section>
+  	
 
+
+<section id="projects">
+	<h2>Projects</h2>
+
+	
+		<article>    <a href="http://datosdemocraticos.com.ar"><img src="/assets/img/screenshots/datosdemoc.jpg" alt="Datos Democráticos" title="Datos Democráticos" /></a>
+    <a href="http://datosdemocraticos.com.ar"><h3>Datos Democráticos</h3></a>
+    <p>Platform to collect, centralize and distribute datasets of the Argentinian's Open Gov institutions. Working to make easier the access to the information and bring data analysis and visualization to everyone.</p></article>
+  	
+
+	
+		<article>    <a href="http://reservashoy.com.ar"><img src="/assets/img/screenshots/reservashoy.jpg" alt="Reservas Hoy" title="Reservas Hoy" /></a>
+    <a href="http://reservashoy.com.ar"><h3>Reservas Hoy</h3></a>
+    <p>Shows a graph of the current and historical amount of the reserves of the Central Bank of Argentina.</p>
+</article>
+  	
+
+	
+		<article>    <a href="https://github.com/glena/d3-resume"><img src="/assets/img/screenshots/d3resume.jpg" alt="d3-resume" title="d3-resume" /></a>
+    <a href="https://github.com/glena/d3-resume"><h3>d3-resume</h3></a>
+    <p>D3.js based resume visualizer.</p>
+</article>
+  	
+
+	
+		<article>    <a href="http://saisiner.com"><img src="/assets/img/screenshots/saisiner.jpg" alt="Saisiner" title="Saisiner" /></a>
+    <a href="http://saisiner.com"><h3>Saisiner</h3></a>
+    <p>Web platform for track, share trips and help to find new places to visit all over the world for a real ultimate experience.</p>
+</article>
+  	
+
+	
+		<article>    <a href="http://twenalizer.herokuapp.com/"><img src="/assets/img/screenshots/twenalizer-venezuela.jpg" alt="Twenalizer Venezuela" title="Twenalizer Venezuela" /></a>
+    <a href="http://twenalizer.herokuapp.com/"><h3>Twenalizer Venezuela</h3></a>
+    <p>Data visualization that tracks real time tweets about Venezuela and shows it on a map.</p>
+</article>
+  	
+
+	
+		<article>    <a href="http://twenalizer-ukraine.herokuapp.com/"><img src="/assets/img/screenshots/twenalizer-ukraine.jpg" alt="Twenalizer Ukraine" title="Twenalizer Ukraine" /></a>
+    <a href="http://twenalizer-ukraine.herokuapp.com/"><h3>Twenalizer Ukraine</h3></a>
+    <p>Data visualization that tracks real time tweets about Ukraine and shows it on a map.</p>
+</article>
+  	
+
+	
+
+	
+
+</section>
+
+<script>
+    
+    var w = $(window).width();
+    var count = Math.floor(w/350);
+    var margin = Math.floor(((w - (350*count))/count)/2);
+    $('#projects article').css('margin', '10px ' + margin + 'px');
+
+</script>
 
 <a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
 
 <script src="/assets/js/main.min.js"></script>
 
 		<script type="text/javascript">
+        /*
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-32429094-1']);
 		_gaq.push(['_trackPageview']);
@@ -134,6 +229,7 @@ $(document).ready(function(){
 		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
+        */
 		</script>
     </body>
 </html>

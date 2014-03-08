@@ -6,6 +6,7 @@
 body{
     margin:0;
     font: normal 14px/1.5  'Roboto Condensed', sans-serif;
+    color:#FFFFFF;
 }
 
 a {
@@ -30,11 +31,13 @@ body .background-holder{
 body .background-holder.blur{
     -webkit-filter: blur(3px); -moz-filter: blur(3px); -o-filter: blur(3px); -ms-filter: blur(3px); filter: blur(3px);
 }
-
+section>h2{
+    padding: 10px;
+    border-bottom: 1px solid #FFFFFF;
+}
 section#about-me {
     max-width: 650px;
     font-size: 16px;
-    color:#FFFFFF;
     float: right;
 }
 section#about-me header {
@@ -72,6 +75,9 @@ section#experience {
     left: 0; 
     z-index: 999;
     width: 100%;
+}
+nav .glyphicon {
+    color:#000000;
 }
 nav {
     padding-left: 10%;
@@ -159,6 +165,23 @@ section footer .about-icons a.flickr {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+}
+
+section#projects {
+    overflow: hidden;
+}
+
+section#projects article{
+    width: 350px;
+    float: left;
+    height: 500px;
+}
+section#projects article h3,
+section#projects article p{
+    padding: 0 5px;
+}
+section#projects article h3 {
+    font-weight: bold;
 }
 
 @media all and (max-width: 410px) {

@@ -141,5 +141,13 @@ module.exports = function(grunt) {
     'copy:deploy', 
     'clean:cleanbuild'
   ]);
+
+  grunt.registerTask('gen', [
+    'jekyll', 
+    'clean:build', 
+    'clean:oldbuild', 
+    'copy:deploy', 
+    'clean:cleanbuild'
+  ]);
   
 };
