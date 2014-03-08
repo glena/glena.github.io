@@ -6,14 +6,11 @@ module.exports = function(grunt) {
     jekyll: {   
       
       options: {                          
-          src : 'jekyll-data/',
-          dest : 'jekyll-data/_site/'
+          src : './jekyll-data',
+          dest : './jekyll-data/_site'
       },
       dist: {                             
-        options: {                        
-          watch: true,
-          doctor: true
-        }
+        options: {}
       }
 
     }
@@ -74,7 +71,7 @@ module.exports = function(grunt) {
       },
       deploy: {
         files: [
-          {expand: true, cwd: 'jekyll-data/_site/', src: ['**'], dest: '..'},
+          {expand: true, cwd: 'jekyll-data/_site/', src: ['**','*'], dest: '.'},
         ]
       }
     }
@@ -124,6 +121,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-jekyll');
 
-  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'jekyll', 'copy:bootstrap', 'clean:build', 'copy:deploy', 'clean:cleanbuild']);
+  grunt.registerTask('build', [
+    'jshint', 
+    'uglify', 
+    'cssmin', 
+    'jekyll', 
+    'copy:bootstrap', 
+    'clean:build', 
+    'clean:oldbuild', 
+    'copy:deploy', 
+    'clean:cleanbuild'
+  ]);
   
 };
