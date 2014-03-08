@@ -5,9 +5,10 @@ module.exports = function(grunt) {
 
     jekyll: {   
       
-      options: {                          
-          src : './jekyll-data',
-          dest : './jekyll-data/_site'
+      options: {   
+        bundleExec: true,                       
+        src : './jekyll-data',
+        dest : './jekyll-data/_site'
       },
       dist: {                             
         options: {}
