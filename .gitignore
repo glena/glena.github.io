@@ -2,3 +2,4 @@
 /jekyll-data/_site/*
 /node_modules
 /node_modules/*
+/Gemfile.lock
