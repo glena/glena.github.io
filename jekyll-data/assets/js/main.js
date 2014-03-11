@@ -23,7 +23,7 @@ $(document).ready(function(){
         if ($.attr(this, 'href')[0] == '#')
         {
             $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top - 45
+                scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 500);
             ga('send', 'event', 'link', 'load', this.href);
         }

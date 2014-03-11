@@ -23,12 +23,14 @@ metadescription: Germán Lena - IT Engineer, Web developer and Open Data enthusi
 {% endfor %}
 
 <section id="projects">
-	<h2>Projects</h2>
-{% for post in site.posts %}
-	{% if post.categories contains 'project' %}
-		<article>{{ post.content }}</article>
-  	{% endif %}
-{% endfor %}
+    <div class="content">
+    	<h2>Projects</h2>
+    {% for post in site.posts %}
+    	{% if post.categories contains 'project' %}
+    		<article>{{ post.content }}</article>
+      	{% endif %}
+    {% endfor %}
+    </div>
 </section>
 
 <script>
