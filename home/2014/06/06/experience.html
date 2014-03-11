@@ -54,11 +54,8 @@ $(document).ready(function(){
     else
     {
         $('#experience')
-            .css('padding-top', function(e){
-                return height/2 - svgHeight / 2;
-            })
             .css('padding-bottom', function(e){
-                return height/2 - svgHeight / 2;
+                return height - svgHeight;
             });
     }
 

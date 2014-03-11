@@ -59,7 +59,7 @@
         </ul>
     </nav>
 </div>
-        
+<div id="top"></div>       
 
 	
 
@@ -136,11 +136,8 @@ $(document).ready(function(){
     else
     {
         $('#experience')
-            .css('padding-top', function(e){
-                return height/2 - svgHeight / 2;
-            })
             .css('padding-bottom', function(e){
-                return height/2 - svgHeight / 2;
+                return height - svgHeight;
             });
     }
 
@@ -187,15 +184,15 @@ $(document).ready(function(){
   	
 
 	
-		<article>    <a href="http://twenalizer.herokuapp.com/"><img src="/assets/img/screenshots/twenalizer-venezuela.jpg" alt="Twenalizer Venezuela" title="Twenalizer Venezuela" /></a>
-    <a href="http://twenalizer.herokuapp.com/"><h3>Twenalizer Venezuela</h3></a>
+		<article>    <a href="http://twenalizer-venezuela.germanlena.com.ar/"><img src="/assets/img/screenshots/twenalizer-venezuela.jpg" alt="Twenalizer Venezuela" title="Twenalizer Venezuela" /></a>
+    <a href="http://twenalizer-venezuela.germanlena.com.ar/"><h3>Twenalizer Venezuela</h3></a>
     <p>Data visualization that tracks real time tweets about Venezuela and shows it on a map.</p>
 </article>
   	
 
 	
-		<article>    <a href="http://twenalizer-ukraine.herokuapp.com/"><img src="/assets/img/screenshots/twenalizer-ukraine.jpg" alt="Twenalizer Ukraine" title="Twenalizer Ukraine" /></a>
-    <a href="http://twenalizer-ukraine.herokuapp.com/"><h3>Twenalizer Ukraine</h3></a>
+		<article>    <a href="http://twenalizer-ukraine.germanlena.com.ar/"><img src="/assets/img/screenshots/twenalizer-ukraine.jpg" alt="Twenalizer Ukraine" title="Twenalizer Ukraine" /></a>
+    <a href="http://twenalizer-ukraine.germanlena.com.ar/"><h3>Twenalizer Ukraine</h3></a>
     <p>Data visualization that tracks real time tweets about Ukraine and shows it on a map.</p>
 </article>
   	
@@ -215,7 +212,7 @@ $(document).ready(function(){
 
 </script>
 
-<a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
+<a href="#top" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
 
 <script src="/assets/js/main.min.js"></script>
 

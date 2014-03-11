@@ -20,11 +20,19 @@ $(document).ready(function(){
     var height,width;
     
     $('a').click(function(){
-        
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
-        ga('send', 'event', 'link', 'load', this.href);
+        if ($.attr(this, 'href')[0] == '#')
+        {
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top - 45
+            }, 500);
+            ga('send', 'event', 'link', 'load', this.href);
+        }
+        else
+        {
+            window.open($.attr(this, 'href'));
+        }
         return false;
     });
+
+
 });

@@ -3,7 +3,6 @@ layout: default
 title: Germán Lena
 metadescription: Germán Lena - IT Engineer, Web developer and Open Data enthusiast. PHP, Ruby on Rails and JS (D3 and AngularJs) developer.
 ---
-
 <div id="navHeader">
     <nav class="navbar-top">
         <ul class="nav">
@@ -16,7 +15,7 @@ metadescription: Germán Lena - IT Engineer, Web developer and Open Data enthusi
         </ul>
     </nav>
 </div>
-        
+<div id="top"></div>       
 {% for post in site.posts %}
 	{% if post.categories contains 'home' %}
 <section id="{{ post.key }}">{{ post.content }}</section>
@@ -41,6 +40,6 @@ metadescription: Germán Lena - IT Engineer, Web developer and Open Data enthusi
 
 </script>
 
-<a href="#" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
+<a href="#top" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
 
 <script src="/assets/js/main.min.js"></script>
