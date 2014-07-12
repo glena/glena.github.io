@@ -18,6 +18,4 @@ Built with gruntjs using:
 * grunt-contrib-uglify (https://github.com/gruntjs/grunt-contrib-uglify)
 * grunt-contrib-copy (https://github.com/gruntjs/grunt-contrib-copy)
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/glena/glena.github.io/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
-[![Analytics](https://ga-beacon.appspot.com/UA-32429094-1/glena/glena.github.io)](https://github.com/glena/glena.github.io)
+[![Analytics](https://ga-beacon.appspot.com/UA-51467836-1/glena/glena.github.io)](https://github.com/glena/glena.github.io)
