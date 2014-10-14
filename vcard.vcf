@@ -2,10 +2,11 @@ BEGIN:VCARD
 VERSION:4.0
 N:Lena;Germán;Gastón;;
 FN:Germán Lena
-EMAIL;TYPE=home;PREF=1:german.lena@gmail.com
+EMAIL:german.lena@gmail.com
 TEL;CELL:+5401169046745
-URL;TYPE=home;PREF=1:http://germanlena.com.ar
-IMPP;TYPE=home;PREF=1:skype:german.lena
-X-SOCIALPROFILE;TYPE=home;PREF=1:github:http://github.com/glena
-X-SOCIALPROFILE;TYPE=home;PREF=1:twitter:http://twitter.com/german_lena
+URL:http://germanlena.com.ar
+X-SKYPE-USERNAME:german.lena
+X-GITHUB:http://github.com/glena
+X-TWITTER:http://twitter.com/german_lena
+BDAY:19880130
 END:VCARD
