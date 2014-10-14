@@ -1,8 +1,8 @@
 BEGIN:VCARD
-VERSION:4.0
 N:Lena;German;Gaston;;
-EMAIL:german.lena@gmail.com
-TEL;CELL:+5401169046745
+ADR;DOM;PARCEL;HOME:;;;CABA;Buenos Aires;;Argentina
+EMAIL;INTERNET:german.lena@gmail.com
+TEL;CELL:+541169046745
+TITLE:Consultant Developer
 URL:http://germanlena.com.ar
-BDAY:19880130
 END:VCARD
