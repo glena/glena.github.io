@@ -81,6 +81,16 @@
 			"description":"Web platform to collect, centralize and distribute datasets of the Argentinian's Open Gov\ninstitutions. Also, bring data analisys and visualizations (reservashoy.com.ar).\nTecnologies: Ruby on Rails, MongoDB, PostgreSQL, D3.js, PHP.",
 			"default_item":false
 		}
+		,
+		{
+			"type":"Work",
+			"institution":"Auth0",
+			"title":"Freelance PHP Consultant",
+			"from":"2014-09-22",
+			"to":null,
+			"description":"Development of the opensource suite of PHP projects, that Auth0 provides to the PHP community\nto ease the integration of different platforms.",
+			"default_item":false
+		}
 	],
 	"study":[
 		{
