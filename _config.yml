@@ -1,0 +1,64 @@
+# Build settings
+name: Germán G. Lena
+markdown: redcarpet
+pygments: true
+encoding: utf-8
+
+# Site settings
+title: "Germán G. Lena"
+description: > # this means to ignore newlines until "email:"
+   I make software &amp; stuff
+
+email: german.lena@gmail.com
+#blog logo
+logo: "/assets/images/df_logo.jpg"
+# blog cover
+cover: "/assets/images/main_background.jpg"
+
+name: 'Germán G. Lena'
+author: 'Germán G. Lena'
+author_image: "/assets/images/author.jpg"
+
+paginate:	5
+
+url: "http://germanlena.com.ar" # the base hostname & protocol for your site
+baseurl: ""
+
+# social icons and sharing options
+social:
+
+  - icon:	linkedin
+    url:	https://www.linkedin.com/in/germanlena
+    desc: Contact me on LinkdIn
+    share_url:
+    share_title:
+    share_link:
+
+  - icon:	twitter
+    url:	https://twitter.com/german_lena
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+  - icon:	github
+    url:	https://github.com/glena
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+    share_link: "&amp;url="
+
+  - icon:	flickr
+    url:	https://www.flickr.com/photos/german_lena/
+    desc:	Check some photos on flickr
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:

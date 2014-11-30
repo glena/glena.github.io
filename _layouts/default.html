@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--
+  _____                                   _
+ / ____|                                 | |
+| |  __  ___ _ __ _ __ ___   __ _ _ __   | |     ___ _ __   __ _  
+| | |_ |/ _ \ '__| '_ ` _ \ / _` | '_ \  | |    / _ \ '_ \ / _` |
+| |__| |  __/ |  | | | | | | (_| | | | | | |___|  __/ | | | (_| |
+ \_____|\___|_|  |_| |_| |_|\__,_|_| |_| |______\___|_| |_|\__,_|
+-->
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <!-- content start -->
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    <!-- content end -->
+
+    {% include footer.html %}
+    {% include javascripts.html %}
+
+  </body>
+
+</html>

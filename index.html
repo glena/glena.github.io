@@ -1,290 +1,95 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <!--
-   _____                                   _                      
-  / ____|                                 | |                     
- | |  __  ___ _ __ _ __ ___   __ _ _ __   | |     ___ _ __   __ _ 
- | | |_ |/ _ \ '__| '_ ` _ \ / _` | '_ \  | |    / _ \ '_ \ / _` |
- | |__| |  __/ |  | | | | | | (_| | | | | | |___|  __/ | | | (_| |
-  \_____|\___|_|  |_| |_| |_|\__,_|_| |_| |______\___|_| |_|\__,_|
-        -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/all.min.css">
-        
-        <title>Germán Lena</title>
-        <meta name="description" content="">
-    </head>
-    
-    
-    
-    <body data-spy="scroll" data-target=".navbar-top">
-        <div class="background-holder"></div>
-    <!--[if lt IE 10]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser and the experience section is not enabled for this browser :(. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-        <script src="/assets/js/base.min.js"></script>
+---
+layout: default
+---
 
-        <div id="navHeader">
-    <nav class="navbar-top">
-        <ul class="nav">
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-        
-        	
-    		<li><span class="glyphicon glyphicon-hand-right"></span><a href="#about-me" >About Me</a></li>
-    		
-        
-        	
-    		<li><span class="glyphicon glyphicon-hand-right"></span><a href="#experience" >Experience &amp; Studies</a></li>
-    		
-        
-        	<li><span class="glyphicon glyphicon-hand-right"></span><a href="#projects" >Projects</a></li>
-        </ul>
-    </nav>
-</div>
-<div id="top"></div>       
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-<section id="about-me">    <header>
-        <h1>Germán Lena</h1>
-    </header>
-    <article>
-        <p>
-            I love music and sports (I usually go out running, rollerblading or swimming) but my real hobby is to learn new technologies.
-        </p>
-        <p>
-            Now, working on my own project about open data and data visualization (you can check it on <a href="http://datosdemocraticos.com.ar">Datos Democraticos</a> and <a href="http://reservashoy.com.ar">Reservas Hoy</a>).
-        </p>
-        <p>
-            I also love travelling and I have another project (<a href="http://saisiner.com">Saisiner</a>). It started with the excuse of track my own trip around Europe and now I am working to improve it and bring useful tools to sightseeing (from this word the name). I hope to finish the V2 soon.
-        </p>
-    </article>
-    <footer>
-        <span class="about-text">Follow me on:</span>
-		<span class="about-icons">
-            <a href="https://github.com/glena" class="github wow tada animated">Github</a>
-            <a href="http://ar.linkedin.com/in/germanlena/" class="linkedin wow tada animated">LinkedIn</a>
-            <a href="https://twitter.com/german_lena" class="twitter wow tada animated">Twitter</a>
-            <a href="http://www.flickr.com/photos/german_lena/" class="flickr wow tada animated">Flickr</a>
-		</span>
-    </footer>
-
-<script>
-
-$(document).ready(function(){
-    
-    var height = $(window).height();
-
-    $('#about-me')
-        .css('padding-top', function(e){
-            return height/2 - $(this).height() / 2;
-        })
-        .css('padding-bottom', function(e){
-            return height/2 - $(this).height() / 2;
-        });
-
-});
-</script></section>
-  	
-
-	
-<section id="experience"><h2>Resume</h2>
-
-<script src="/assets/js/resume.all.min.js"></script>
-
-<script>
-$(document).ready(function(){
-    var height = $(window).height();
-    var width = $(window).width();
-    var svgHeight = height * 0.8;
-
-    if (width < 900) width = 900;
-    
-    if (svgHeight < 600) 
-    {
-        svgHeight = 600;
-    }    
-    else
-    {
-        $('#experience')
-            .css('padding-bottom', function(e){
-                return height - svgHeight;
-            });
-    }
-
-    var resume = new d3Resume({
-      width: width,
-      height: svgHeight,
-      wrapperSelector: "#experience",
-      dataUrl: '/assets/data/resume.json'
-    });
-});
-</script>
-</section>
-  	
-
-
-<section id="projects">
-    <div class="content">
-    	<h2>Projects</h2>
-    
-    	
-    		<article>    <a href="hhttp://germanlena.com.ar/quecomo"><img src="/assets/img/screenshots/quecomo.jpg" alt="¿Qué como?" title="¿Qué como?" /></a>
-    <a href="http://germanlena.com.ar/quecomo"><h3>¿Qué como?</h3></a>
-    <p>Small webapp to play with angular and help to take difficult decisions about "What to luch?"</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://germanlena.com.ar/ioc-dependencyinjection-laravel"><img src="/assets/img/screenshots/ioc.jpg" alt="Talk about IOC container and Dependency Injection" title="Talk about IOC container and Dependency Injection" /></a>
-    <a href="http://germanlena.com.ar/ioc-dependencyinjection-laravel"><h3>Talk about IOC container and Dependency Injection in #LaravelBA</h3></a>
-    <p>Talk explaining what is an IOC container and what is Dependency Injection.</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://germanlena.com.ar/repositorypattern"><img src="/assets/img/screenshots/repositorypattern.jpg" alt="Repository Pattern in #LaravelBA" title="Repository Pattern in #LaravelBA" /></a>
-    <a href="http://germanlena.com.ar/repositorypattern"><h3>Talk about Repository Pattern in #LaravelBA</h3></a>
-    <p>Talk explaining the Repository Pattern implemented in Laravel, introducing the use of the Laravel IoC in #LaravelBA meetup (slides <a href="http://germanlena.com.ar/repositorypattern/">here</a>).</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://germanlena.com.ar/reactdemo/"><img src="/assets/img/screenshots/reactdemo.jpg" alt="Talk about Ratchet & Laravel integration in #LaravelBA" title="Talk about Ratchet & Laravel integration in #LaravelBA" /></a>
-    <a href="http://germanlena.com.ar/reactdemo/"><h3>Talk about Ratchet & Laravel integration in #LaravelBA</h3></a>
-    <p>Talk explaining how to integrate ReactPHP, Ratchet and Laravel to make a realtime chat in #LaravelBA meetup (slides, code & video <a href="http://germanlena.com.ar/reactdemo/">here</a>).</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://germanlena.com.ar/trip-dviz"><img src="/assets/img/screenshots/trip-dviz.jpg" alt="Trip Dviz" title="Trip Dviz" /></a>
-    <a href="http://germanlena.com.ar/trip-dviz"><h3>Dataviz of my last trip</h3></a>
-    <p>Data visualization of my last trip around Europe using LeafletJS.</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://datosdemocraticos.com.ar"><img src="/assets/img/screenshots/datosdemoc.jpg" alt="Datos Democráticos" title="Datos Democráticos" /></a>
-    <a href="http://datosdemocraticos.com.ar"><h3>Datos Democráticos</h3></a>
-    <p>Platform to collect, centralize and distribute datasets of the Argentinian's Open Gov institutions. Working to make easier the access to the information and bring data analysis and visualization to everyone.</p></article>
-      	
-    
-    	
-    		<article>    <a href="http://reservashoy.com.ar"><img src="/assets/img/screenshots/reservashoy.jpg" alt="Reservas Hoy" title="Reservas Hoy" /></a>
-    <a href="http://reservashoy.com.ar"><h3>Reservas Hoy</h3></a>
-    <p>Shows a graph of the current and historical amount of the reserves of the Central Bank of Argentina.</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="https://github.com/glena/d3-resume"><img src="/assets/img/screenshots/d3resume.jpg" alt="d3-resume" title="d3-resume" /></a>
-    <a href="https://github.com/glena/d3-resume"><h3>d3-resume</h3></a>
-    <p>D3.js based resume visualizer.</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://saisiner.com"><img src="/assets/img/screenshots/saisiner.jpg" alt="Saisiner" title="Saisiner" /></a>
-    <a href="http://saisiner.com"><h3>Saisiner</h3></a>
-    <p>Web platform for track, share trips and help to find new places to visit all over the world for a real ultimate experience.</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://twenalizer-venezuela.germanlena.com.ar/"><img src="/assets/img/screenshots/twenalizer-venezuela.jpg" alt="Twenalizer Venezuela" title="Twenalizer Venezuela" /></a>
-    <a href="http://twenalizer-venezuela.germanlena.com.ar/"><h3>Twenalizer Venezuela</h3></a>
-    <p>Data visualization that tracks real time tweets about Venezuela and shows it on a map.</p>
-</article>
-      	
-    
-    	
-    		<article>    <a href="http://twenalizer-ukraine.germanlena.com.ar/"><img src="/assets/img/screenshots/twenalizer-ukraine.jpg" alt="Twenalizer Ukraine" title="Twenalizer Ukraine" /></a>
-    <a href="http://twenalizer-ukraine.germanlena.com.ar/"><h3>Twenalizer Ukraine</h3></a>
-    <p>Data visualization that tracks real time tweets about Ukraine and shows it on a map.</p>
-</article>
-      	
-    
-    	
-    
-    	
-    
+<div class="teaserimage">
+    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
+        Teaser Image
     </div>
-</section>
+</div>
 
-<script>
-    
-    var w = $(window).width();
-    var count = Math.floor(w/350);
-    var margin = Math.floor(((w - (350*count))/count)/2);
-    $('#projects article').css('margin', '10px ' + margin + 'px');
+<header class="blog-header">
+    {% if site.logo %}
+      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
+    {% endif %}
+    <h1 class="blog-title">{{ site.title }}</h1>
+    <h2 class="blog-description">{{ site.description }}</h2>
+    <div class="custom-links">
+      {% for social in site.social %}
+        {% if social.url %}
+            <a class="icon-{{ social.icon }}" href="{{ social.url }}">
+              <i class="fa fa-{{ social.icon }}"></i>
+            </a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+        {% endif %}
+      {% endfor %}
+      <a href="/about/">About</a>
+    </div>
+</header>
 
-</script>
 
-<a href="#top" class="slide" id="btt">Top <i class="glyphicon glyphicon-hand-up"></i></a>
+<main class="content" role="main">
 
-<script src="/assets/js/main.min.js"></script>
+    {% if site.tags.featured %}
+    <h5 class="index-headline featured"><span>Featured</span></h5>
 
-		<script type="text/javascript">
-        
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-51467836-1']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
-		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-        
-		</script>
+    <div class="container featured">
+      {% for post in site.tags.featured %}
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+  <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+            </div>
+          <div>
+        </article>
+      {% endfor %}
+    </div>
 
-    </body>
-</html>
+    <h5 class="index-headline normal"><span>Regular</span></h5>
+    {% endif %}
+
+    <div class="cf frame">
+      {% for post in paginator.posts %}
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            </header>
+            <section class="post-excerpt" itemprop="description">
+              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+            </section>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+            </div>
+          <div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <nav class="pagination" role="navigation">
+      {% if paginator.next_page %}
+        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+      {% endif %}
+      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+          <a class="older-posts" href="/">Newer posts &rarr;</a>
+        {% else %}
+          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+        {% endif %}
+      {% endif %}
+    </nav>
+
+
+    <!-- {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}} -->
+
+</main>
