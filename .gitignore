@@ -4,3 +4,4 @@
 /node_modules/*
 /Gemfile.lock
 .sass-cache
+_site
