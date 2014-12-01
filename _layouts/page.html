@@ -4,6 +4,7 @@
 <html>
   {% include head.html %}
   <body itemscope itemtype="http://schema.org/Article">
+    {% include javascripts.html %}
     {% include header.html %}
     <main class="content" role="main">
       <article class="post">
@@ -51,9 +52,8 @@
       <div class="inner">
         <h1 class="blog-title">{{ site.title }}</h1>
         <h2 class="blog-description">{{ site.description }}</h2>
-        <a href="/" class="btn">Back to Overview</a>
+        <a href="/" class="btn">Back to Home</a>
       </div>
     </div>
-    {% include javascripts.html %}
   </body>
 </html>
