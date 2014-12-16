@@ -281,7 +281,7 @@ function timeSince(date) {
     if (interval > 1) {
         return icon + interval + " minutes";
     }
-    return icon + Math.floor(seconds) + " seconds";
+    return icon + " a couple of seconds ago";
   
     
 }
