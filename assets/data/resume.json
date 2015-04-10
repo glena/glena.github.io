@@ -43,7 +43,7 @@
 			"from":"2013-06-01",
 			"to":"2015-04-10",
 			"description":"Definitions of technical requirements in detail. Task assignment and resource coordination.\nDefinition and architecture design. Developers support.\nPlatform: Linux / Apache\nTecnologies: PHP, PostgresSQL, MySQL, XHTML, AJAX, JS, CSS, Ext MVC",
-			"default_item":true
+			"default_item":false
 		},
 		{
 			"type":"Work",
