@@ -41,7 +41,7 @@
 			"institution":"DigBang",
 			"title":"Project Leader",
 			"from":"2013-06-01",
-			"to":null,
+			"to":"2015-04-10",
 			"description":"Definitions of technical requirements in detail. Task assignment and resource coordination.\nDefinition and architecture design. Developers support.\nPlatform: Linux / Apache\nTecnologies: PHP, PostgresSQL, MySQL, XHTML, AJAX, JS, CSS, Ext MVC",
 			"default_item":true
 		},
@@ -87,9 +87,19 @@
 			"institution":"Auth0",
 			"title":"Freelance PHP Consultant",
 			"from":"2014-09-22",
-			"to":null,
+			"to":"2015-03-10",
 			"description":"Development of the opensource suite of PHP projects, that Auth0 provides to the PHP community\nto ease the integration of different platforms.",
 			"default_item":false
+		}
+		,
+		{
+			"type":"Work",
+			"institution":"Auth0",
+			"title":"Customer Success Engineer",
+			"from":"2015-03-13",
+			"to":null,
+			"description":"Development of the opensource suite of PHP projects, that Auth0 provides to the PHP community\nto ease the integration of different platforms.\n Helping clients with their PHP integrations.",
+			"default_item":true
 		}
 	],
 	"study":[
