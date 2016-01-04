@@ -77,7 +77,7 @@
 			"institution":"Datos Democráticos (datosdemocraticos.com.ar Beta)",
 			"title":"Developer/Founder/Own project",
 			"from":"2013-10-01",
-			"to":null,
+			"to":"2015-12-01",
 			"description":"Web platform to collect, centralize and distribute datasets of the Argentinian's Open Gov\ninstitutions. Also, bring data analisys and visualizations (reservashoy.com.ar).\nTecnologies: Ruby on Rails, MongoDB, PostgreSQL, D3.js, PHP.",
 			"default_item":false
 		}
