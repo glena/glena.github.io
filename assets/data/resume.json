@@ -68,7 +68,7 @@
 			"institution":"Saisiner (saisiner.com Beta)",
 			"title":"Developer/Founder/Own project",
 			"from":"2012-07-01",
-			"to":null,
+			"to":"2015-10-01",
 			"description":"Web platform for track, share trips and help to find new places to visit all over the world for a real ultimate experience. Still under development.\nTecnologies: Ruby on Rails, JQuery, PostgreSQL.",
 			"default_item":false
 		},
