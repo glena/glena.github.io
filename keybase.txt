@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/germanlena
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://germanlena.com.ar
+  * I am germanlena (https://keybase.io/germanlena) on keybase.
+  * I have a public key with fingerprint 710B 7134 6752 DB37 29F4  45EA 7D62 BF8D 5ED9 B56C
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01019d811b5a025f8806f00043b17177d884600bb4202d548893facd5345c9eb03e90a",
+            "fingerprint": "710b71346752db3729f445ea7d62bf8d5ed9b56c",
+            "host": "keybase.io",
+            "key_id": "7d62bf8d5ed9b56c",
+            "kid": "01019d811b5a025f8806f00043b17177d884600bb4202d548893facd5345c9eb03e90a",
+            "uid": "15916c50e33368817f137de6be340b19",
+            "username": "germanlena"
+        },
+        "service": {
+            "hostname": "germanlena.com.ar",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1459992762,
+    "expire_in": 157680000,
+    "prev": "de6d9b5ffacb799983f99c178f10204376adb8e27ac9bc61df726f1c3a0e4f20",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMNCAnicrVJ9UFRVHN1VMeXLDRgwyEaeODK5rO/7Y8GgQSQlS7EGcY3lfdy3+2TZ
+t+4+1hDJrGhyqmGGSJMZIoywwYQYK2kZUozBDAOVlMBsnYChmABJC+lDuo+pv+rP
+/rpzf/ecc8858+uKWGgINZYLZ14vGPzYZezprC0x5IW0BcoQQZVKEWsZUgTmD+CS
+gE+zFykSYkVQDMU4icUwgeJRnJJZFqVlFEVJQsAYjGEkliVpFBUEEkdxiSJZliNk
+XpQogqREDggoATiUR8yIrLgdwOvxKm4NyjIYKjAYQdIMhUsCweCcTJIU4BmJxgWZ
+lSggcQJFi5DoVH06A5oTeB+wKCqcwYt93t5/4P9n3yXzchjFYbRIoYAgCJplMUbG
+CEYCtAAIEhUwTgf6gNfNFwOIhkGLebcLuHmk3IzAuV8RgV6tnuVfGIuoFlt4L5Tw
+eFVNFVUXfHZqmseqs7VSjw7fCwT730J2QXFLsE1I8AOvT1HdiBWDSFFTdGWMpDiO
+wxkaNyPgWY/iBXZFR1AMzcICUP0b4IeS0L5emgxjCwyksITMcSLGsDKG4rAohuYl
+gQU4w4ucINKYJDM4LWMiwaOAlHEU0aPtcauIlYQ2eQeU9CkON6+VeAFSfq5z1yKD
+MdSwOGSBvmWG0KWmf3ZvIm/ZvTRf/pOxkU1L3nzc6MjMnhtvHFvVMLi35sve3WcS
+3hrkjr2/czZ9yYYLn/pjr62z9p+/dPP0xR13xlbPaj8cZhM7upbfnq5ikhw151LS
+LpcvaN34W35BnRErSP99aZPtm+/NQ1+/0SIcHKl0plyZ85RtOtuSX3XJn1QXXj/z
+tpYVfbeqoGflCy+GbyuunzBNpigzhsChSFNesCaqlpu6fqI9PmDrelWbvRG/riG8
+ujJ908uf3+7vXe0P+2li61H7yRXJh05u/xDfkhUS8W1GdEKwpSg6mNxyf8SpdtOD
+r225NW5HSoOn3q0PiYmL8zurp3ZEXou3XY+dzECCUXFTu/bEOJHTfbmZVz9xrVzz
+QWAw+wFl3/qK9PDNK6bDcj/r78b5r6S24UXnzYLkjmmumPqz9YA2U3gjdegJU/P+
+OYv61IWNYaObzx5xZnZa3hlbaB5O7mhofW/Y2v9cdlH31sSwvrS4jOkkv3nUlt+X
+fnd5976G79rH19wMpBxhu7dtz1EHHru8IfxEXCidmsN3A8u9Vb2VD90ZyK6sbW69
+D02YVnqKs36eaZ9UrxS+kvvSwdqhxc9EBR9+unH/dCDalti5dqTpUdlWyDd+8Ujd
+sQMJHf2eX8e6Rv84fvX5gVu/pJWvXZZVwVdX73bGuNY3Bg3meEeO6aOLLSOzbdFK
+iTGquelo8s6hVO7HoeOH/wJxOsBW
+=5Bu6
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/germanlena
+
+==================================================================
