@@ -95,10 +95,20 @@
 		{
 			"type":"Work",
 			"institution":"Auth0",
-			"title":"Customer Success Engineer",
+			"title":"Engineer - Frontend SDKs/Widgets",
+			"from":"2015-10-01",
+			"to":"2016-02-01",
+			"description":"Mantaining and developing new versions of the Auth0's web SDK (auth0.js) and login widget (Lock.js)",
+			"default_item":false
+		}
+		,
+		{
+			"type":"Work",
+			"institution":"Auth0",
+			"title":"Engineer - Core",
 			"from":"2015-03-13",
 			"to":null,
-			"description":"Development of the opensource suite of PHP projects, that Auth0 provides to the PHP community\nto ease the integration of different platforms.\n Helping clients with their PHP integrations.",
+			"description":"Auth0's core team member (Oauth2, OpenID Connect, SAML, WSFed), mantaining and depeloping new features.",
 			"default_item":true
 		}
 	],
