@@ -99,7 +99,7 @@
 			"from":"2015-03-13",
 			"to":"2016-10-01",
 			"description":"Development of the opensource suite of PHP projects, that Auth0 provides to the PHP community\nto ease the integration of different platforms.\n Helping clients with their PHP integrations.",
-			"default_item":true
+			"default_item":false
 		}
 		,
 		{
