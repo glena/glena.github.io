@@ -1,75 +1,47 @@
----
-layout: default
----
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">		
+    <title>Germán Lena</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 10px 50px;
+      }
 
-<div class="teaserimage">
-    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
-        Teaser Image
-    </div>
-    <div id="latest_tweet_wrapper">
-      <div id="latest_tweet">
-      </div>
-      <div class="tick"></div>
-    </div>
-</div>
+      ul {
+        padding-left: 5px;
+        list-style: none;
+        line-height: 1.5;
+        font-size: 13px;
+      }
 
-<header class="blog-header">
-    {% if site.logo %}
-      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
-    {% endif %}
-    <h1 class="blog-title">{{ site.title }}</h1>
-    <h2 class="blog-description">{{ site.description }}</h2>
-    <div class="custom-links">
-      {% for social in site.social %}
-        {% if social.url %}
-            <a class="icon-{{ social.icon }}" href="{{ social.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ social.desc }}">
-              <i class="fa fa-{{ social.icon }}"></i>
-            </a>
-            &nbsp;&nbsp;·&nbsp;&nbsp;
-        {% endif %}
-      {% endfor %}
-      <a href="/about/">About</a>
-      &nbsp;&nbsp;·&nbsp;&nbsp;
-      <a href="/experience/">Experience</a>
-    </div>
-</header>
+      li::before {
+        content: ">";
+        display: inline;
+        margin-right: 5px;
+      }
 
+      h1 {
+        margin-bottom: 40px;
+      }
 
-<main class="content" role="main">
+      h2{
+        margin-top: 40px;
+        border-bottom: 1px solid #00000052;
+      }
 
-    <h5 class="index-headline normal"><span>Last Projects</span></h5>
+      .details {
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
 
-    <div class="cf frame">
-      {% for post in paginator.posts %}
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
-            </div>
-          <div>
-        </article>
-      {% endfor %}
-    </div>
-
-    <nav class="pagination" role="navigation">
-      {% if paginator.next_page %}
-        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older projects</a>
-      {% endif %}
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.previous_page %}
-        {% if paginator.page == 2 %}
-          <a class="older-posts" href="/">Newer projects &rarr;</a>
-        {% else %}
-          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer projects &rarr;</a>
-        {% endif %}
-      {% endif %}
-    </nav>
-
-</main>
+    <h1>Germán G. Lena</h1>
+    <ul>
+      <li>Buenos Aires, Argentina</li>
+      <li><a href="https://www.linkedin.com/in/germanlena/">https://www.linkedin.com/in/germanlena/</a></li>
+    </ul>
+  </body>
+</html>

@@ -1,7 +1,0 @@
-/jekyll-data/_site
-/jekyll-data/_site/*
-/node_modules
-/node_modules/*
-/Gemfile.lock
-.sass-cache
-_site
